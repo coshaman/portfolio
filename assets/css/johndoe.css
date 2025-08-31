@@ -11318,8 +11318,8 @@ body::-webkit-scrollbar-thumb
 }
 
 .blog-card .img-holder {
-  min-width: 350px;
-  max-width: 350px;
+  min-width: 450px;
+  max-width: 450px;
 }
 
 .blog-card .img-holder img {
