@@ -933,1081 +933,266 @@
     <script src="assets/js/johndoe.js"></script>
 
     <script>
-        function animation(){
-            document.getElementById('blog').style.textAlign = "center";
-            document.getElementById('blog').innerHTML = `
-            <center><div class="row narrow section-intro with-bottom-sep" style="text-align:center;">
-            <div class="col-twelve">
-                
-            </div>   		
-        </div> <!-- end row section-intro -->
-         <div class="box2" style="text-align: center; font-size: 2rem; font-family: 'Black Han Sans', sans-serif; line-height: 2.5rem;width:80%; margin:0 auto;">
-            <h3>Animation</h3>
-                <h1>애니메이션</h1>  			
-                
-                <p class="lead">와타시(쑻) 사실은 애니메이션도 좋아한다능... 이게 다 내가 봤던 애니메이션이라능...
-            <span class="lead" style="color:SKYBLUE;">역사에 길이 남을 역작</span>
-            <span class="lead" style="color:blue;">찾기 힘든 명작</span>	
-            <span class="lead" style="color:green;">잘 만든 수작</span>		
-            <span class="lead" style="color:orange;">볼만한 평작</span>
-            <span class="lead" style="color:brown;">시간이 아까운 망작</span>	
-            <span class="lead"  style="color:black;">애매해서 평가 거부</span>
-            <span class="lead"  style="color:red;">훌륭한 괴작</span>
-            <span class="lead"  style="font-style: italic;">백합물(이 표시가 없다면 백합물로 취급하지 않음)</span></p>
-<!-- 평가 지표에 대해 : <br>1. 작품성 : 작품의 주제와 메시지는 1순위의 평가 요소입니다. 주제는 주제의 종류가 아닌 주제에 대한 심오한 고찰이 이루어졌는가로 판단합니다. 주제를 전달한 방식에 있어 미장센과 연출의 활용도, 각본과 대사의 질 역시 중요합니다. <bR>2. 캐릭터성 : 캐릭터의 입체성과 디자인은 2순위 평가요소입니다. 캐릭터의 성격, 심리, 외형 등을 판단합니다. <br>3. 스토리 : 서사의 깊이는 3순위 평가요소입니다. 서사가 매끄럽고 개연성이 있으며, 떡밥 분포와 회수가 잘 되어야 합니다. 스토리가 분기된 뒤 다시 합쳐지는 형태(군상극 등)를 가장 선호합니다.<br>4. 연출 : 작화와 영상미, 연출은 4순위 평가요소입니다. 작화가 별로라도 캐릭터성과 작품성이 충분하다면 괜찮지만, 연출만큼은 다른 요소만큼의 중요성을 가집니다. 또한 배경작화와 액션의 역동성 등이 중요합니다.<br>5. 사운드 : ost, bgm, 성우 연기 등은 5순위 평가요소입니다. 오프닝과 엔딩 테마를 특히 중요하게 생각합니다.<br>6. 2차창작활성화여부 : 예술성이 충분한 작품이라면 상관 없지만, 작품의 완성은 작품이 아닌 관객이 합니다. 관객이 상상력을 발휘해 더 넓은 세계관과 이야기를 만들 때 작품이 완성됩니다. 동인지, 웹코믹, 팬픽의 양과 질이 중요합니다. -->
-             <p style="text-decoration: none; font-size: 3rem; color:blue;font-style: italic;">프리큐어 시리즈</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 85%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">85%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">스탠다드가 된 신선함 <strong>후유증 1년</strong></p>
-             <p style="text-decoration: none; font-size: 3rem; color:blue;font-style: italic;">소녀종말여행</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 83%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">83%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">설원의 노스탤지어</p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;font-style: italic;">케모노프렌즈 1기</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 76%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">76%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">타노시이한 거시다</p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;font-style: italic;">프리코네 1기</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 70%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">70%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">그치만 캬루쨩 배신자잖아?</p>
-             <p style="text-decoration: none; font-size: 3rem; color:blue;">코노스바</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 88%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">88%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">모범적인 마이클 베이, 개그하는 톨킨</p>
-             <p style="text-decoration: none; font-size: 3rem; color:black;">리제로</p>
-             <p style="font-family : '고딕';">평가하지 않음.</p>
-             <p style="text-decoration: none; font-size: 3rem; color:orange;">사카모토입니다만</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 52%;background-color:orange;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">52%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">중2병이지만 간지나고 싶어</p>
-             <p style="text-decoration: none; font-size: 3rem; color:BLACK;">무능한 나나</p>
-             <p style="font-family : '고딕';">평가하지 않음.</p>
-             <p style="text-decoration: none; font-size: 3rem; color:orange;">괴롭히지 말아요, 나가토로양</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 58%;background-color:orange;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">58%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">달달한 사디즘과 멋진 마조히즘</p>
-             <p style="text-decoration: none; font-size: 3rem; color:SKYBLUE;">신세기 에반게리온</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 98%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">98%</span>
-                                    </div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 93%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">대중성 93%</span></div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 85%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">예술성 91%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">오라, 치열하게 아스라지는 달콤한 인생이여</p>
-             <p style="text-decoration: none; font-size: 3rem; color:brown;">BTOOOM!</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 30%;background-color:brown;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">30%</span>
-                                    </div>
-                            </div>
-             <p style="text-decoration: none; font-size: 3rem; color:brown;">학원묵시록</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 29%;background-color:brown;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">29%</span>
-                                    </div>
-                            </div>
-             <p style="text-decoration: none; font-size: 3rem; color:SKYBLUE;font-style: italic;">해피 슈가 라이프</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 97%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">97%</span>
-                                    </div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 92%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">대중성 92%</span></div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 85%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">예술성 85%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">단맛쓴맛 끝에 백합 한송이 씹으면서 추락하기 <strong>후유증 1주</strong></p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;font-style: italic;">보석의 나라</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 79%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">79%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">이윽고 사라질 보석들이여.</p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;">기생수</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 65%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">65%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">모든 생물은 기생하고 공생하는 것</p>
-             <p style="text-decoration: none; font-size: 3rem; color:blue;">카구야님은 고백받고 싶어!</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 92%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">92%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">누구나 그럴듯한 계획은 있다. 사랑에 빠지기 전까지 <strong>후유증 2주</strong></p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;">미래일기</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 71%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">71%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">실력편 얀데레의 정석</p>
-             <p style="text-decoration: none; font-size: 3rem; color:ORANGE;">샤를로트/엔젤비트</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 60%;background-color:orange;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">60%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">곱씹어야만 좋은 이야기도 결국은 좋은 이야기니까.</p>
-             <p style="text-decoration: none; font-size: 3rem; color:orange;">어나더</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 60%;background-color:orange;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">60%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">Another Day with Daze</p>
-             <p style="text-decoration: none; font-size: 3rem; color:orange;">사이다처럼 말이 톡톡 솟아올라</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 55%;background-color:orange;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">55%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">사이다 맛은 뻔해서 좋은 법</p>
-             <p style="text-decoration: none; font-size: 3rem; color:GREEN;">인류는 쇠퇴했습니다.</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 74%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">74%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">유쾌하게 노래하는 인류 보완 계획</p>
-             <p style="text-decoration: none; font-size: 3rem; color:BLUE;font-style: italic;">마녀의 여행</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 90%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">90%</span>
-                                    </div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 94%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">대중성 94%</span></div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 81%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">예술성 81%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">몽환적이지 않은 환상성, 가장 동행하고 싶은 여행 <strong>후유증 1주</strong></p>
-             <p style="text-decoration: none; font-size: 3rem; color:blue;font-style: italic;">러키☆스타</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 81%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">81%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">세라복 입고 앗뿌뿌뿌에뿌에</p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;">청춘 돼지는 바니걸 선배의 꿈을 꾸지 않는다.</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 79%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">79%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">꿈 꿀 자격있는 청춘의 의지</p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;">어쨌든 귀여워</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 78%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">78%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">귀여우면 된거야</p>
-             <p style="text-decoration: none; font-size: 3rem; color:orange;">우에노 선배는 서툴러</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 56%;background-color:ORANGE;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">56%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">우에노 입니다만?</p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;">불꽃소방대</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 70%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">70%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">꽃밭에 불 지르기</p>
-             <p style="text-decoration: none; font-size: 3rem; color:SKYBLUE;font-style: italic;">마법소녀 마도카☆마기카</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 100%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">100%</span>
-                                    </div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 94%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">대중성 94%</span></div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 92%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">예술성 92%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">기적도 마법도 없는 세계에서 너와 함께 소원을 <strong>후유증 3년+</strong></p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;font-style: italic;">가브릴 드롭아웃</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 77%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">77%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">엔젤&데빌 with 일상</p>
-          
-             <p style="text-decoration: none; font-size: 3rem; color:green;font-style: italic;">프리코네 2기</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 76%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">76%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">배드엔딩이든 해피엔딩이든 몇 번이고 네 손을 꽉 잡을테니까</p>
-             <p style="text-decoration: none; font-size: 3rem; color:SKYBLUE;font-style: italic;">마마마 반역의 이야기</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 100%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">100%</span>
-                                    </div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 90%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">대중성 90%</span></div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 94%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">예술성 94%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">마음을 배신할 바에야 어떤 죄라도 뒤집어 쓸 수 있기에 <strong>후유증 3년+</strong></p>
-             <p style="text-decoration: none; font-size: 3rem; color:SKYBLUE;">카구야 3기</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 93%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">93%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">이미 고전의 반열이라 해도 좋다</p>
-             <p style="text-decoration: none; font-size: 3rem; color:SKYBLUE;">바케모노가타리</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 90%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">90%</span>
-                                    </div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 89%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">대중성 89%</span></div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 88%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">예술성 88%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">샤프트하게 내리꽂는 기기괴괴 <strong>후유증 3주</strong></p>
-             <p style="text-decoration: none; font-size: 3rem; color:BLUE;">모노가타리 시리즈 2nd Season</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 82%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">82%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">뭐든지 구할 순 없어. 구할 수 있는 것만.</p>
-             <p style="text-decoration: none; font-size: 2rem; color:blue;">니세모노가타리/네코모노가타리(흑)/츠키모노가타리/코요미모노가타리</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 80%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">80%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">숭고한 난장판</p>
-             <p style="text-decoration: none; font-size: 3rem; color:blue;">오와리모노가타리</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 90%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">90%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">완결 안나는 시리즈의 완벽한 피날레</p>
-             <p style="text-decoration: none; font-size: 3rem; color:blue;">속 오와리모노가타리/키즈모노가타리</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 82%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">82%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">시네마의 니시오</p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;font-style: italic;">러브라이브!</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 79%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">79%</span>
-                                    </div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 97%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">대중성 97%</span></div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 80%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">예술성 80%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">작품을 넘어 문화가 되다</p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;font-style: italic;">5등분의 신부</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 79%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">79%</span>
-                                    </div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 85%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">대중성 85%</span></div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 60%;background-color:orange;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">예술성 60%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">5등분은 못해도 다섯 조각은 되니까 <strong>후유증 1주</strong></p>
-             <p style="text-decoration: none; font-size: 3rem; color:orange;">새 엄마의 딸이 전여친이었다.</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 69%;background-color:orange;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">69%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">제목 순서를 바꾸면 더 이상해집니다. 새 여친의 딸이 전엄마였다. 응?</p>
-             <p style="text-decoration: none; font-size: 3rem; color:orange;font-style: italic;">타프리스 슈가스텝</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 67%;background-color:orange;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">67%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">본편에서 잠깐 숨돌리며 달콤하게 산책</p>
-             <p style="text-decoration: none; font-size: 3rem; color:blue;">날씨의 아이</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 81%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">81%</span>
-                                    </div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 85%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">대중성 85%</span></div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 91%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">예술성 91%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">청년, 사랑이 아직 할 수 있는 일이 있어</p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;">스파이 패밀리</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 79%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">79%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">비밀 없는 집안이 어디있으랴. 가까이서 보면 희극이고 멀리서 보면 비극인 행복</p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;font-style: italic;">일상</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 73%; background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">73%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">비일상의 오케스트라</p>
-             <p style="text-decoration: none; font-size: 3rem; color:SKYBLUE;">니세코이</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 97%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">97%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">러브코미디의 교과서 <strong>후유증 2주</strong></p>
-             <p style="text-decoration: none; font-size: 3rem; color:black;font-style: italic;">어과초</p>
-             <p style="font-family : '고딕';">평가하지 않음</p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;font-style: italic;">리코리스 리코일</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 77%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">77%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">피안화밭에서 백합 키우기</p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;">이치노세 일가의 대죄</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 74%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">74%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">반전의, 반전에 의한, 반전을 위한 범작.</p>
-             <p style="text-decoration: none; font-size: 3rem; color:orange;">귀엽기만 한게 아닌 시키모리양</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 70%;background-color:orange;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">70%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">귀엽게 멋지게 상냥하게</p>
-             <p style="text-decoration: none; font-size: 3rem; color:ORANGE;">뻐꾸기 커플</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 60%;background-color:orange;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">60%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">어째서 재료가 좋은데 맛이 없을까</p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;font-style: italic;">마법소녀 타루토 마기카</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 77%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">77%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">마도카의 구원 있으라!</p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;">철야의 노래(애니)</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 72%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">72%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">은하수 초원에서 하늘에는 마천루</p>
-             <p style="text-decoration: none; font-size: 3rem; color:brown;">여친, 빌리겠습니다.</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 100%;background-color:brown;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">-100%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">ㄴ니ㅣㅣㅣㅣㅣㅣ기미 씨이이팔 개시바알 ㅏ <strong>후유증 및 외상후스트레스장애</strong></p>
-             <p style="text-decoration: none; font-size: 3rem; color:red;font-style: italic;">경녀!!!!!!</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 71%;background-color:red;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">71%</span>
-                                    </div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 77%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">대중성 77%</span></div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 85%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">예술성 85%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">모두 이 앞에서 무릎 꿇으라! 작가는 미쳤다!</p>
-             <p style="text-decoration: none; font-size: 3rem; color:red;font-style: italic;">마법소녀를 동경해서</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 77%;background-color:red;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">77%</span>
-                                    </div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 85%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">대중성 85%</span></div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 90%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">예술성 90%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">경녀조차 이 앞에서 무릎 꿇으리! 작가는 천재다!</p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;font-style: italic;">이 멋진 세계에 폭염을!</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 75%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">75%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">우직하게 익스플로젼</p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;font-style: italic;">마기아 레코드</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 73%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">73%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">내가 세상에 화평을 주러 온 줄로 생각지 말라 화평이 아니요 검을 주러 왔노라</p>
-             <p style="text-decoration: none; font-size: 3rem; color:blue;font-style: italic;">마기아 레코드 2기</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 84%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">84%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">마법소녀 난중일기</p>
-             <p style="text-decoration: none; font-size: 3rem; color:SKYBLUE;font-style: italic;">마기아 레코드 3기</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 95%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">95%</span>
-                                    </div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 82%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">대중성 82%</span></div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 90%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">예술성 90%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">시작은 미약해도 그 끝은 창대하리라 <strong>후유증 1주</strong></p>
-             <p style="text-decoration: none; font-size: 3rem; color:orange;font-style: italic;">바니즈 퀘스트</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 65%;background-color:orange;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">55%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">죽어줘야겠다 북극곰</p>
-             <p style="text-decoration: none; font-size: 3rem; color:BLUE;font-style: italic;">봇치 더 록!</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 88%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">88%</span>
-                                    </div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 94%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">대중성 94%</span></div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 85%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">예술성 85%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">봇치와 밴드와 푸른 청춘</p>
-             <p style="text-decoration: none; font-size: 3rem; color:blue;">쓰르라미 울 적에</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 83%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">83%</span>
-                                    </div>
-                            </div>
-             <p style="text-decoration: none; font-size: 3rem; color:blue;">사이코로시(쓰르라미 울 적에)</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 87%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">87%</span>
-                                    </div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 80%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">대중성 80%</span></div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 88%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">예술성 88%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">세계란 99퍼센트는 시시한 법 <strong>후유증 1주</strong></p>
-             <p style="text-decoration: none; font-size: 3rem; color:BROWN;">쓰르라미 울 적에 업/졸</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 55%;background-color:brown;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">55%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">오만했다</p>
-             <p style="text-decoration: none; font-size: 3rem; color:blue;font-style: italic;">학교생활!</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 86%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">86%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">아슬아슬하게 인간성 들고 사인오각 경주</p>
-             <p style="text-decoration: none; font-size: 3rem; color:SKYBLUE;font-style: italic;">이윽고 네가 된다</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 97%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">97%</span>
-                                    </div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 93%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">대중성 93%</span></div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 95%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">예술성 95%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">너로 피어오르는 고결한 백합 성경 <strong>후유증 3주</strong></p>
-             
-             <p style="text-decoration: none; font-size: 3rem; color:green;font-style: italic;">보빔무리</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 87%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">87%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">무리가 아니었다.</p>
-             <p style="text-decoration: none; font-size: 3rem; color:ORANGE;font-style: italic;">만약 사랑이 보인다면</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 57%;background-color:orange;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">57%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">기숙사 포르노</p>
-             <p style="text-decoration: none; font-size: 3rem; color:ORANGE;font-style: italic;">CITRUS</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 60%;background-color:orange;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">60%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">근친레즈는 엄청났다</p>
-             <p style="text-decoration: none; font-size: 3rem; color:ORANGE;font-style: italic;">나 이외 인류 전원 백합</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 52%;background-color:orange;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">52%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">괜찮은 설정, 나쁘지 않은 복선, 좇같은 결말. 20화만 더 그렸다면 명작이 됐을 만화</p>
-             <p style="text-decoration: none; font-size: 3rem; color:red;font-style: italic;">더러운 네가 가장 귀여워</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 82%;background-color:red;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">82%</span>
-                                    </div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 73%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">대중성 73%</span></div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 94%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">예술성 94%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">가학에서 피어나는 붉은 백합의 몽환적 파멸 <strong>후유증 1주</strong></p>
-             <p style="text-decoration: none; font-size: 3rem; color:brown;font-style: italic;">맑은 나라의 얏파레단</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 40%;background-color:brown;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">40%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">텔레토비식 백합</p>
-             <p style="text-decoration: none; font-size: 3rem; color:orange;font-style: italic;">흡혈귀라고 불리고 싶어!</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 54%;background-color:orange;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">54%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">백합 본능 흡혈하기</p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;font-style: italic;">저 아이에게 키스와 흰 백합꽃을</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 79%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">79%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">그 모든 곳에 그 모든 너를 만난다 해도 지금 이 사랑을.</p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;font-style: italic;">속삭이듯 사랑을 노래하다</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 76%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">76%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">달달하고 스윗하고 달콤한 백합</p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;font-style: italic;">날조트랩 -ntr-</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 77%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">77%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">극한까지 NTR</p>
-             <p style="text-decoration: none; font-size: 3rem; color:orange;font-style: italic;">전생왕녀와 천재영애의 마법혁명</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 60%;background-color:orange;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">60%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">어째서인지 치사타키가 생각나는 조합</p>
-             <p style="text-decoration: none; font-size: 3rem; color:blue;">Vivy -Fluorite Eye's Song-</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 87%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">87%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">인간의 서사, 인간의 주제, 그리고 인간 대신 ai로. <strong>후유증 2일</strong></p>
-             <p style="text-decoration: none; font-size: 3rem; color:blue;">개그만화 보기 좋은 날</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 81%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">81%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">개그만화 보기 좋은 날(개학 전날, 시험 전날)</p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;">스왑⇔스왑</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 79%;background-color:GREEN;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">79%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">경쾌하게 키싱 유어 라이프</p>
-             <p style="text-decoration: none; font-size: 3rem; color:blue;">스즈미야 하루히의 우울</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 89%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">85%</span>
-                                    </div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 95%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">대중성 95%</span></div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 88%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">예술성 88%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">모든 것의 시작이 된 엔들리스 청춘</p>
-             <p style="text-decoration: none; font-size: 3rem; color:blue;">스즈미야 하루히의 소실</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 88%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">88%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">하루히를 잊지 못할 이유 <strong>후유증 1주</strong></p>
-             <p style="text-decoration: none; font-size: 3rem; color:blue;">바케모노가타리(코믹스)</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 86%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">86%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">니시오 이신이 만화가였다면.</p>
-             <p style="text-decoration: none; font-size: 3rem; color:orange;font-style: italic;">여자끼리 같은 건 말도 안 되잖아라고 우기는 여자아이를 백일 동안 철저하게 함락시키는 백합 이야기</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 69%;background-color:orange;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">69%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">제목보다 긴 리뷰를 쓸 자신이 없다</p>
-             <p style="text-decoration: none; font-size: 3rem; color:green;">사이버펑크 엣지러너</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 80%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">80%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">사이버펑크의 신약이 될만하다</p>
-             <p style="text-decoration: none; font-size: 3rem; color:blue;">최애의 아이</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 86%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">86%</span>
-                                    </div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 92%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">대중성 92%</span></div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 83%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">예술성 83%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">거짓은 최고의 사랑이라서. 거짓은 가장 깊은 진심이어서.</p>
-             <p style="text-decoration: none; font-size: 3rem; color:blue;font-style: italic;">악마의 리들</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 82%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">82%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">담담하게 하지만 대담하게, 유리병 안에 백합.</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;">스즈미야 하루히의 경악</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 85%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">85%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">경악스러울 정도로 완벽하다!</p>
-            <p style="text-decoration: none; font-size: 3rem; color:green;">스즈미야 하루히의 직관</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 79%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">79%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">부실에서 티타임</p>
-            <p style="text-decoration: none; font-size: 3rem; color:brown;">마법소녀 매지컬 디스트로이어</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 50%;background-color:brown;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">50%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">오프닝만은 최고점을 주고 싶은 폐기물</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;">언어의 정원(소설)</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 86%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">86%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">작품이란 이런 것이다. 신카이 마코토는 이런 예술가였다.</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;">아베 토모미 단편집</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 83%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">83%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">치밀하고 현실적인 몽환성의 공포. 좀더 현대적인 이토 준지의 느낌이다.</p>
-            <p style="text-decoration: none; font-size: 3rem; color:green;font-style: italic;">밝은 기억상실</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 77%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">77%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">정말로 밝다. 기억상실도, 동성애라는 주제도 잊을 만큼 가볍고 즐거운 러브 코미디</p>
-            <p style="text-decoration: none; font-size: 3rem; color:orange;font-style: italic;">뭐가 사랑인지 모르겠어</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 60%;background-color:orange;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">60%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">나도 모르겠는데</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;">시간을 달리는 소녀</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 88%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">88%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">원작도, 영화도 모두 훌륭하다. 시간을/달리는/소녀, 셋 모두 완벽하게 담아냈다. '너의 이름은'의 또 하나의 원형이 아닐까.</p>
-            <p style="text-decoration: none; font-size: 3rem; color:skyblue;">철야의 노래</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 97%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">97%</span>
-                                    </div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 89%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">대중성 89%</span></div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 95%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">예술성 95%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">철야라는 신선한 주제를 만족스럽게 표현해낸 감각적인 러브코미디 <strong>후유증 2주</strong></p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;font-style: italic;">마법소녀 육성계획</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 83%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">83%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">이상과 목적의 부조화 사이에서 고통받는 마법소녀 군상극</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;font-style: italic;">마법소녀 사이트</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 80%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">80%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">흔한 마마마 아류작은 아니지만 명작도 아닌 그럭저럭 참신한 작품</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;">마법소녀 오브 디 엔드</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 82%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">82%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">장르에 연연하지 않는다면 조연 하나는 잘 살린, 깊이는 없어도 넓이는 있는 작품</p>
+  function animation() {
+      const animeSections = [
+        {
+          title: '애니',
+          items: [
+            { title: '두사람은 프리큐어', score: 92, comment: '스탠다드가 된 신선함 <strong>후유증 1년</strong>' },
+            { title: '소녀종말여행', score: 84, comment: '설원의 노스탤지어' },
+            { title: '케모노프렌즈 1기', score: 84, comment: '타노시이한 거시다' },
+            { title: '프리코네 1기', score: 70, comment: '그치만 캬루쨩 배신자잖아?' },
+            { title: '코노스바', score: 89, comment: '모범적인 마이클 베이, 개그하는 톨킨' },
+            { title: '리제로', score: null, comment: '평가하지 않음.' },
+            { title: '사카모토입니다만', score: 52, comment: '중2병이지만 간지나고 싶어' },
+            { title: '무능한 나나', score: null, comment: '평가하지 않음.' },
+            { title: '괴롭히지 말아요, 나가토로양', score: 58, comment: '달달한 사디즘과 멋진 마조히즘' },
+            { title: '신세기 에반게리온', score: 97, comment: '오라, 치열하게 아스라지는 달콤한 인생이여' },
+            { title: 'BTOOOM!', score: 30, comment: '' },
+            { title: '학원묵시록', score: 29, comment: '' },
+            { title: '해피 슈가 라이프', score: 97, comment: '단맛쓴맛 끝에 백합 한송이 씹으면서 추락하기 <strong>후유증 1주</strong>' },
+            { title: '보석의 나라', score: 79, comment: '이윽고 사라질 보석들이여.' },
+            { title: '기생수', score: 65, comment: '모든 생물은 기생하고 공생하는 것' },
+            { title: '카구야님은 고백받고 싶어!', score: 92, comment: '누구나 그럴듯한 계획은 있다. 사랑에 빠지기 전까지 <strong>후유증 2주</strong>' },
+            { title: '미래일기', score: 71, comment: '이것이 얀데레다 절망편' },
+            { title: '샤를로트/엔젤비트', score: 63, comment: '곱씹어야만 좋은 이야기도 결국은 좋은 이야기니까.' },
+            { title: '어나더', score: 60, comment: 'Another Day with Daze' },
+            { title: '사이다처럼 말이 톡톡 솟아올라', score: 55, comment: '사이다 맛은 뻔해서 좋은 법' },
+            { title: '인류는 쇠퇴했습니다.', score: 74, comment: '유쾌하게 노래하는 인류 보완 계획' },
+            { title: '마녀의 여행', score: 90, comment: '몽환적이지 않은 환상성, 가장 동행하고 싶은 여행 <strong>후유증 1주</strong>' },
+            { title: '러키☆스타', score: 86, comment: '앗뿌뿌뿌에뿌에' },
+            { title: '청춘 돼지는 바니걸 선배의 꿈을 꾸지 않는다.', score: 79, comment: '꿈 꿀 자격있는 청춘의 의지' },
+            { title: '어쨌든 귀여워', score: 78, comment: '귀여우면 된거야' },
+            { title: '우에노 선배는 서툴러', score: 56, comment: '우에노 입니다만?' },
+            { title: '불꽃소방대', score: 70, comment: '꽃밭에 불 지르기' },
+            { title: '마법소녀 마도카☆마기카', score: 100, comment: '기적도 마법도 없는 세계에서 너와 함께 소원을 <strong>후유증 3년+</strong>' },
+            { title: '가브릴 드롭아웃', score: 78, comment: '엔젤&데빌 with 일상' },
+            { title: '프리코네 2기', score: 76, comment: '배드엔딩이든 해피엔딩이든 몇 번이고 네 손을 꽉 잡을테니까' },
+            { title: '마마마 반역의 이야기', score: 100, comment: '마음을 배신할 바에야 어떤 죄라도 뒤집어 쓸 수 있기에 <strong>후유증 3년+</strong>' },
+            { title: '카구야 3기', score: 93, comment: '이미 고전의 반열이라 해도 좋다' },
+            { title: '바케모노가타리', score: 90, comment: '샤프트하게 내리꽂는 기기괴괴 <strong>후유증 3주</strong>' },
+            { title: '모노가타리 시리즈 2nd Season', score: 82, comment: '뭐든지 구할 순 없어. 구할 수 있는 것만.' },
+            { title: '오와리모노가타리', score: 90, comment: '완결 안나는 시리즈의 완벽한 피날레' },
+            { title: '속 오와리모노가타리/키즈모노가타리', score: 82, comment: '시네마의 니시오' },
+            { title: '러브라이브!', score: 79, comment: '작품을 넘어 문화가 되다' },
+            { title: '5등분의 신부', score: 79, comment: '5등분은 못해도 다섯 조각은 되니까 <strong>후유증 1주</strong>' },
+            { title: '새 엄마의 딸이 전여친이었다.', score: 69, comment: '제목 순서를 바꾸면 더 이상해집니다. 새 여친의 딸이 전엄마였다. 응?' },
+            { title: '타프리스 슈가스텝', score: 67, comment: '본편에서 잠깐 숨돌리며 달콤하게 산책' },
+            { title: '날씨의 아이', score: 81, comment: '청년, 사랑이 아직 할 수 있는 일이 있어' },
+            { title: '스파이 패밀리', score: 82, comment: '비밀 없는 집안이 어디있으랴. 가까이서 보면 희극이고 멀리서 보면 비극인 행복' },
+            { title: '일상', score: 73, comment: '비일상의 오케스트라' },
+            { title: '니세코이', score: 95, comment: '러브코미디의 교과서 <strong>후유증 2주</strong>' },
+            { title: '어과초', score: 80, comment: '평가하지 않음' },
+            { title: '리코리스 리코일', score: 77, comment: '피안화밭에서 백합 키우기' },
+            { title: '이치노세 일가의 대죄', score: 62, comment: '반전의, 반전에 의한, 반전을 위한 범작.' },
+            { title: '귀엽기만 한게 아닌 시키모리양', score: 70, comment: '귀엽게 멋지게 상냥하게' },
+            { title: '뻐꾸기 커플', score: 60, comment: '어째서 재료가 좋은데 맛이 없을까' },
+            { title: '마법소녀 타루토 마기카', score: 77, comment: '마도카의 구원 있으라!' },
+            { title: '철야의 노래(애니)', score: 72, comment: '은하수 초원에서 하늘에는 마천루' },
+            { title: '여친, 빌리겠습니다.', score: -100, comment: 'ㄴ니ㅣㅣㅣㅣㅣㅣ기미 씨이이팔 개시바알 ㅏ <strong>후유증 및 외상후스트레스장애</strong>' },
+            { title: '경녀!!!!!!', score: 76, comment: '모두 이 앞에서 무릎 꿇으라! 작가는 미쳤다!' },
+            { title: '마법소녀를 동경해서', score: 87, comment: '경녀조차 이 앞에서 무릎 꿇으리! 작가는 천재다!' },
+            { title: '이 멋진 세계에 폭염을!', score: 66, comment: '우직하게 익스플로전' },
+            { title: '마기아 레코드', score: 73, comment: '내가 세상에 화평을 주러 온 줄로 생각지 말라 화평이 아니오 검을 주러 왔노라' },
+            { title: '마기아 레코드 2기', score: 84, comment: '마법소녀 난중일기' },
+            { title: '마기아 레코드 3기', score: 94, comment: '시작은 미약해도 그 끝은 창대하리라' },
+            { title: '바니즈 퀘스트', score: 56, comment: '죽어줘야겠다 북극곰' },
+            { title: '봇치 더 록!', score: 88, comment: '봇치와 밴드와 푸른 청춘' },
+            { title: '쓰르라미 울 적에', score: 83, comment: '그많던 쓰르라미는 누가 다 죽였을까' },
+            { title: '사이코로시(쓰르라미 울 적에)', score: 87, comment: '세계의 99퍼센트가 시시하더라도 <strong>후유증 1주</strong>' },
+            { title: '쓰르라미 울 적에 업/졸', score: 55, comment: '오만했다' },
+            { title: '학교생활!', score: 86, comment: '아슬아슬하게 인간성 들고 사인오각 경주' },
+            { title: '이윽고 네가 된다', score: 98, comment: '너로 피어오르는 고결한 백합 성경 <strong>후유증 3주</strong>' },
+            { title: '보빔무리', score: 87, comment: '무리가 아니었다.' },
+            { title: '만약 사랑이 보인다면', score: 57, comment: '기숙사 포르노' },
+            { title: 'CITRUS', score: 60, comment: '근친레즈는 엄청났다' },
+            { title: '나 이외 인류 전원 백합', score: 52, comment: '괜찮은 설정, 나쁘지 않은 복선, 좇같은 결말. 20화만 더 그렸다면 명작이 됐을 만화' },
+            { title: '더러운 네가 가장 귀여워', score: 88, comment: '가학에서 피어나는 붉은 백합의 몽환적 파멸 <strong>후유증 1주</strong>' },
+            { title: '맑은 나라의 얏파레단', score: 40, comment: '텔레토비식 백합' },
+            { title: '흡혈귀라고 불리고 싶어!', score: 54, comment: '백합 본능 흡혈하기' },
+            { title: '저 아이에게 키스와 흰 백합꽃을', score: 80, comment: '그 모든 곳에 그 모든 너를 만난다 해도 지금 이 사랑을.' },
+            { title: '속삭이듯 사랑을 노래하다', score: 76, comment: '달달하고 스윗하고 달콤한 백합' },
+            { title: '날조트랩 -ntr-', score: 76, comment: '극한까지 NTR' },
+            { title: '전생왕녀와 천재영애의 마법혁명', score: 60, comment: '어째서인지 치사타키가 생각나는 조합' },
+            { title: "Vivy -Fluorite Eye's Song-", score: 85, comment: '인간의 서사, 인간의 주제, 그리고 인간 대신 ai로. <strong>후유증 2일</strong>' },
+            { title: '개그만화 보기 좋은 날', score: 84, comment: '개그만화 보기 좋은 날(개학 전날, 시험 전날)' },
+            { title: '스왑⇔스왑', score: 80, comment: '경쾌하게 키싱 유어 라이프' },
+            { title: '스즈미야 하루히의 우울', score: 85, comment: '모든 것의 시작이 된 엔들리스 청춘' },
+            { title: '스즈미야 하루히의 소실', score: 88, comment: '하루히를 잊지 못할 이유' },
+            { title: '여자끼리 같은 건 말도 안 되잖아라고 우기는 여자아이를 백일 동안 철저하게 함락시키는 백합 이야기', score: 80, comment: '제목보다 긴 코멘트를 쓸 자신이 없다' },
 
-            <p style="text-decoration: none; font-size: 3rem; color:blue;font-style: italic;">프리즈마 이리야</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 85%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">85%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">살아 움직이는 로리보다 좋은 것은 없다</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;">슈타인즈 게이트</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 90%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">90%</span>
-                                    </div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 91%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">대중성 91%</span></div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 89%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">예술성 89%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">그것이 슈타인즈 게이트의 선택이라면 <strong>후유증 2주</strong></p>
-            <p style="text-decoration: none; font-size: 3rem; color:green;font-style: italic;">~희망의 힘~ 어른 프리큐어 23</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 79%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">79%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">다시 만나서 반가웠어</p>
-            <p style="text-decoration: none; font-size: 3rem; color:green;font-style: italic;">백합 사이에 낀 여자는 죄인가요?</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 79%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">79%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">백합 사이에 낀 남자면 중죄다</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;">마왕성에서 잘자요</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 86%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">86%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">소재 하나로 1절만 끝없이</p>
-            <p style="text-decoration: none; font-size: 3rem; color:green;font-style: italic;">거짓의 마리골드</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 73%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">73%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">앞이 보이지 않아야 어두운줄을 모른다</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;">공각기동대</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 89%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">89%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">사이버펑크의 구약</p>
-            <p style="text-decoration: none; font-size: 3rem; color:green;">메이드 인 어비스</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 80%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">80%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">어둠을 바라볼 때 어둠도 널 바라본다</p>
-            <p style="text-decoration: none; font-size: 3rem; color:red;">죄와 벌(망가타로)</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 86%;background-color:red;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">86%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">나사식 죄와 벌</p>
-            <p style="text-decoration: none; font-size: 3rem; color:skyblue;">나사식</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 95%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">95%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">악몽인줄 알았던 지하 1층의 옥상</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;">그대들 어떻게 살 것인가</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 88%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">88%</span>
-                                    </div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 80%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">대중성 80%</span></div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 93%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">예술성 93%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">거장의 묵직한 질문, 대답은 이 영화로 충분해</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;font-style: italic;">케이온!</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 90%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">90%</span>
-                                    </div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 95%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">대중성 95%</span></div>
-                            </div>
-			    <div class="progress mb-3" style="width:20%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 80%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span style="font-size:1.4vh;color:white;font-family:sans-serif">예술성 80%</span></div>
-                            </div>
-             <p style="font-family : '고딕';">빛나라 소녀들이여, Girls go Maniac <strong>후유증 1달</strong></p>
-            <p style="text-decoration: none; font-size: 3rem; color:skyblue;">슈타인즈 게이트</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 92%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">92%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">슈타인즈 게이트의 선택</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;">슈타인즈 게이트 제로</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 88%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">88%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">단점까지 포괄한 놀란 감독 스타일의 수작</p>
-            <p style="text-decoration: none; font-size: 3rem; color:skyblue;">파프리카</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 96%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">96%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">좋은 꿈 나쁜 꿈 이상한 꿈</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;">극장판 프로젝트 세카이 부서진 세카이와 전해지지 않는 미쿠의 노래</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 85%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">85%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">기대 이상의 각본과 역시나 훌륭한 음악</p>
-            <p style="text-decoration: none; font-size: 3rem; color:green;">가끔씩 툭하고 러시아어로 부끄러워하는 옆자리의 아랴양</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 76%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">76%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">러시아어 공부하려고 봤는데 유키만 귀여워서 일본어 공부를 하게 되는 애니</p>
-            <p style="text-decoration: none; font-size: 3rem; color:green;">봇치 더 록! 외전 히로이 키쿠리의 과음일기</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 79%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">79%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">사실상 본편</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;">스쿨 데이즈</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 89%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">89%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">나의 학창 생활이 부정당했다</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;">모노가타리 오프&몬스터 시즌</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 86%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">86%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">그리운 맛</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;font-style: italic;">오빠는 끝!</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 90%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">90%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">모든 인류의 로망</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;font-style: italic;">뉴게임</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 81%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">81%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">모든 개발자의 로망</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;">마법소녀 기담 ABC</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 84%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">84%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">니즈 파악의 모범</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;">이토 준지의 소용돌이(애니메이션)</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 86%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">86%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">우즈마키 우즈마키 우즈마키 우즈마키 우즈마키</p>
-            <p style="text-decoration: none; font-size: 3rem; color:green;">이과가 사랑에 빠졌기에 증명해보았다</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 79%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">79%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">모든 대학원생의 로망?</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;">단다단</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 84%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">84%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">주간연재의 극한</p>
-            <p style="text-decoration: none; font-size: 3rem; color:green;font-style: italic;">사슴아이어슬렁어슬렁호시탐탐</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 74%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">74%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">수능 전날에 봐서는 안되었다</p>
-            <p style="text-decoration: none; font-size: 3rem; color:brown;font-style: italic;">블루아카이브 The Animation</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 50%;background-color:brown;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">50%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">블아를 안하는데 15만원어치 굿즈를 산 나와 그런 내가 봐도 망한 애니화</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;">장송의 프리렌</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 84%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">84%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">엘프 종말 여행</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;font-style: italic;">마법사 프리큐어!! 미라이 데이즈</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 82%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">82%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">꿈과 희망을 안고 미래로 가자</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;font-style: italic;">나는 서큐버스에게 키스를 했다</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 85%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">85%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">백합으로서 완성된 작품</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;font-style: italic;">타코피의 원죄</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 89%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">89%</span>
-                                    </div>
-                            </div>
-            <p style="text-decoration: none; font-size: 3rem; color:skyblue;font-style: italic;">카우보이 비밥</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 94%;background-color:skyblue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">94%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">강렬한 블루스</p>
-            <p style="text-decoration: none; font-size: 3rem; color:green;">내가 15살이 아니게 되더라도</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 77%;background-color:green;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">77%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">모든 장면이 하이라이트 연출이면 하이라이트가 아니라고 본다</p>
-            <p style="text-decoration: none; font-size: 3rem; color:blue;">일찍이 마법소녀와 악은 적대하고 있었다.</p>
-             <div class="progress mb-3" style="width:40%;height:2vh; margin:0 auto;">
-                                <div class="progress-bar" role="progressbar" style="width: 88%;background-color:blue;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span style="font-size:1.4vh;color:white;font-family:sans-serif">88%</span>
-                                    </div>
-                            </div>
-             <p style="font-family : '고딕';">조그마한 행복을 백 개 세고 기나긴 밤을 뛰어넘을테니까</p>
-             평점 변경 로그 : <p><span style="font-size:2.4vh;color:red;font-family:sans-serif">프리즈마 이리야 : 90% > 85%</span></p>
+            { title: '사이버펑크 엣지러너', score: 85, comment: '사이버펑크의 신약' },
+            { title: '최애의 아이', score: 86, comment: '거짓은 가장 깊은 진심이라서' },
+            { title: '악마의 리들', score: 83, comment: '유리병 속 백합' },
+            { title: '스즈미야 하루히의 경악', score: 85, comment: '경악스러운 완벽함' },
+            { title: '스즈미야 하루히의 직관', score: 77, comment: '부실에서 티타임' },
+            { title: '마법소녀 매지컬 디스트로이어', score: 50, comment: '오프닝만은 100점이었던 폐기물' },
+            { title: '언어의 정원', score: 88, comment: '신카이 마코토는 이런 예술가였다' },
+            { title: '아베 토모미 단편집', score: 83, comment: '치밀하고 현실적인 몽환성의 공포. 좀더 현대적인 이토 준지의 느낌이다.' },
+            { title: '밝은 기억상실', score: 77, comment: '정말로 밝다. 기억상실도, 동성애라는 주제도 잊을 만큼 가볍고 즐거운 러브 코미디' },
+            { title: '뭐가 사랑인지 모르겠어', score: 60, comment: '나도 모르겠는데' },
+            { title: '시간을 달리는 소녀', score: 88, comment: "원작도, 영화도 모두 훌륭하다. 시간을/달리는/소녀, 셋 모두 완벽하게 담아냈다. '너의 이름은'의 또 하나의 원형이 아닐까." },
+            { title: '철야의 노래', score: 97, comment: '대중성 89% 예술성 95% 철야라는 신선한 주제를 만족스럽게 표현해낸 감각적인 러브코미디 후유증 2주' },
+            { title: '마법소녀 육성계획', score: 83, comment: '이상과 목적의 부조화 사이에서 고통받는 마법소녀 군상극' },
+            { title: '마법소녀 사이트', score: 80, comment: '흔한 마마마 아류작은 아니지만 명작도 아닌 그럭저럭 참신한 작품' },
+            { title: '마법소녀 오브 디 엔드', score: 82, comment: '장르에 연연하지 않는다면 조연 하나는 잘 살린, 깊이는 없어도 넓이는 있는 작품' },
+            { title: '프리즈마 이리야', score: 85, comment: '살아 움직이는 로리보다 좋은 것은 없다' },
+            { title: '슈타인즈 게이트', score: 90, comment: '대중성 91% 예술성 89% 그것이 슈타인즈 게이트의 선택이라면 후유증 2주' },
+            { title: '~희망의 힘~ 어른 프리큐어 23', score: 79, comment: '다시 만나서 반가웠어' },
+            { title: '백합 사이에 낀 여자는 죄인가요?', score: 79, comment: '백합 사이에 낀 남자면 중죄다' },
+            { title: '마왕성에서 잘자요', score: 86, comment: '소재 하나로 1절만 끝없이' },
+            { title: '거짓의 마리골드', score: 73, comment: '앞이 보이지 않아야 어두운줄을 모른다' },
+            { title: '공각기동대', score: 89, comment: '사이버펑크의 구약' },
+            { title: '메이드 인 어비스', score: 80, comment: '어둠을 바라볼 때 어둠도 널 바라본다' },
+            { title: '죄와 벌(망가타로)', score: 86, comment: '나사식 죄와 벌' },
+            { title: '나사식', score: 95, comment: '악몽인줄 알았던 지하 1층의 옥상' },
+            { title: '그대들 어떻게 살 것인가', score: 88, comment: '대중성 80% 예술성 93% 거장의 묵직한 질문, 대답은 이 영화로 충분해' },
+            { title: '케이온!', score: 90, comment: '대중성 95% 예술성 80% 빛나라 소녀들이여, Girls go Maniac 후유증 1달' },
+            { title: '슈타인즈 게이트', score: 92, comment: '슈타인즈 게이트의 선택' },
+            { title: '슈타인즈 게이트 제로', score: 88, comment: '단점까지 포괄한 놀란 감독 스타일의 수작' },
+            { title: '파프리카', score: 96, comment: '좋은 꿈 나쁜 꿈 이상한 꿈' },
+            { title: '극장판 프로젝트 세카이 부서진 세카이와 전해지지 않는 미쿠의 노래', score: 85, comment: '기대 이상의 각본과 역시나 훌륭한 음악' },
+            { title: '가끔씩 툭하고 러시아어로 부끄러워하는 옆자리의 아랴양', score: 76, comment: '러시아어 공부하려고 봤는데 유키만 귀여워서 일본어 공부를 하게 되는 애니' },
+            { title: '봇치 더 록! 외전 히로이 키쿠리의 과음일기', score: 79, comment: '사실상 본편' },
+            { title: '스쿨 데이즈', score: 89, comment: '나의 학창 생활이 부정당했다' },
+            { title: '모노가타리 오프&몬스터 시즌', score: 86, comment: '그리운 맛' },
+            { title: '오빠는 끝!', score: 90, comment: '모든 인류의 로망' },
+            { title: '뉴게임', score: 81, comment: '모든 개발자의 로망' },
+            { title: '마법소녀 기담 ABC', score: 84, comment: '니즈 파악의 모범' },
+            { title: '이토 준지의 소용돌이(애니메이션)', score: 86, comment: '우즈마키 우즈마키 우즈마키 우즈마키 우즈마키' },
+            { title: '이과가 사랑에 빠졌기에 증명해보았다', score: 79, comment: '모든 대학원생의 로망?' },
+            { title: '단다단', score: 84, comment: '주간연재의 극한' },
+            { title: '사슴아이어슬렁어슬렁호시탐탐', score: 74, comment: '수능 전날에 봐서는 안되었다' },
+            { title: '블루아카이브 The Animation', score: 50, comment: '블아를 안하는데 15만원어치 굿즈를 산 나와 그런 내가 봐도 망한 애니화' },
+            { title: '장송의 프리렌', score: 84, comment: '엘프 종말 여행' },
+            { title: '마법사 프리큐어!! 미라이 데이즈', score: 82, comment: '꿈과 희망을 안고 미래로 가자' },
+            { title: '나는 서큐버스에게 키스를 했다', score: 85, comment: '백합으로서 완성된 작품' },
+            { title: '타코피의 원죄', score: 89, comment: '동정은 행복으로부터 가장 먼 감정이다' },
+            { title: '카우보이 비밥', score: 94, comment: '강렬한 블루스' },
+            { title: '내가 15살이 아니게 되더라도', score: 77, comment: '모든 장면이 하이라이트 연출이면 하이라이트가 아니라고 본다' },
+            { title: '일찍이 마법소녀와 악은 적대하고 있었다.', score: 88, comment: '조그마한 행복을 백 개 세고 기나긴 밤을 뛰어넘을테니까' },
+
+
+
+         ],
+        },
+        { title: '영화', items: [] },
+        { title: '코믹스', items: [
+            { title: '바케모노가타리', score: 86, comment: '니시오 이신이 만화가였다면.' }] },
+      ];
+
+    function getScoreMeta(score) {
+      if (score === null || score === undefined) {
+        return { color: '#7f8c8d', label: '평가 보류' };
+      }
+      if (score >= 90) return { color: 'skyblue', label: '역사에 길이 남을 역작' };
+      if (score >= 80) return { color: '#2980b9', label: '찾기 힘든 명작' };
+      if (score >= 70) return { color: '#27ae60', label: '잘 만든 수작' };
+      if (score >= 60) return { color: '#16a085', label: '볼만한 평작' };
+      if (score >= 40) return { color: '#f1c40f', label: '애매한 작품' };
+      if (score > 0)  return { color: '#d35400', label: '시간이 아까운 망작' };
+      return { color: '#7f8c8d', label: '훌륭한 괴작 / 강력 비추천' };
+    }
+
+    function renderAnimeCard(item) {
+      const meta = getScoreMeta(item.score);
+      const hasScore = typeof item.score === 'number';
+      const barWidth = hasScore ? Math.max(5, Math.min(100, Math.abs(item.score))) : 0;
+      const scoreText = hasScore ? item.score + '점' : 'N/A';
+
+      const barHtml = hasScore
+        ? `<div class="progress mb-2" style="height: 1.1rem; background-color: #f1f1f1; border-radius: 999px; overflow:hidden;">
+             <div class="progress-bar" role="progressbar"
+               style="width: ${barWidth}%; background-color: ${meta.color}; display:flex; align-items:center; padding-left: 0.5rem;"
+               aria-valuenow="${item.score}" aria-valuemin="-100" aria-valuemax="100">
+               <span style="font-size: 0.8rem; color: #fff; font-family: sans-serif;">${scoreText}</span>
+             </div>
+           </div>`
+        : `<div style="font-size: 0.85rem; color: #7f8c8d; margin-bottom: 0.25rem;">점수 없음 (평가 보류)</div>`;
+
+      return `
+        <div class="col-md-6 mb-4">
+          <div class="card" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align:left;">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h4 class="mb-0" style="font-size: 1.3rem; font-weight: 700;">${item.title}</h4>
+                <span class="badge" style="background-color: ${meta.color}; color: #fff; font-size: 0.75rem; padding: 0.25rem 0.6rem; border-radius: 999px;">
+                  ${meta.label}
+                </span>
+              </div>
+              ${barHtml}
+              ${item.comment ? `<p class="mt-2 mb-0" style="font-family:'고딕', sans-serif; font-size: 0.95rem; line-height: 1.6;">${item.comment}</p>` : ''}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderSection(section) {
+      const cardsHtml = section.items.map(renderAnimeCard).join("");
+      return `
+        <div class="mb-5">
+          <h3 style="font-size: 1.6rem; margin-bottom: 1.3rem; font-weight: 700;">${section.title}</h3>
+          <div class="row justify-content-center">
+            ${cardsHtml}
+          </div>
+        </div>
+      `;
+    }
+
+    const legendHtml = `
+      <div class="mb-4" style="font-size: 0.9rem;">
+        <span style="display:inline-block; margin:0 0.4rem 0.4rem 0;">
+          <span style="display:inline-block; width:10px; height:10px; background:skyblue; border-radius:50%; margin-right:4px;"></span>
+          역사에 길이 남을 역작
+        </span>
+        <span style="display:inline-block; margin:0 0.4rem 0.4rem 0;">
+          <span style="display:inline-block; width:10px; height:10px; background:#2980b9; border-radius:50%; margin-right:4px;"></span>
+          찾기 힘든 명작
+        </span>
+        <span style="display:inline-block; margin:0 0.4rem 0.4rem 0;">
+          <span style="display:inline-block; width:10px; height:10px; background:#27ae60; border-radius:50%; margin-right:4px;"></span>
+          잘 만든 수작
+        </span>
+        <span style="display:inline-block; margin:0 0.4rem 0.4rem 0;">
+          <span style="display:inline-block; width:10px; height:10px; background:#16a085; border-radius:50%; margin-right:4px;"></span>
+          볼만한 평작
+        </span>
+        <span style="display:inline-block; margin:0 0.4rem 0.4rem 0;">
+          <span style="display:inline-block; width:10px; height:10px; background:#f1c40f; border-radius:50%; margin-right:4px;"></span>
+          애매한 작품
+        </span>
+        <span style="display:inline-block; margin:0 0.4rem 0.4rem 0;">
+          <span style="display:inline-block; width:10px; height:10px; background:#7f8c8d; border-radius:50%; margin-right:4px;"></span>
+          평가 보류 / 괴작 / 마이너스 점수
+        </span>
+      </div>
+    `;
+
+    const sectionsHtml = animeSections.map(renderSection).join("");
+
+    const blog = document.getElementById("blog");
+    blog.style.textAlign = "center";
+    blog.innerHTML = `
+      <center>
+        <div class="row narrow section-intro with-bottom-sep" style="text-align:center;">
+          <div class="col-twelve"></div>
+        </div>
+        <div class="box2" style="text-align: center; font-size: 1rem; font-family: 'Gothic A1', '맑은 고딕', 'Noto Sans KR', sans-serif; line-height: 1.8; width: 90%; max-width: 1080px; margin: 0 auto;">
+          <h3 style="margin-bottom: 0.25rem;">Animation</h3>
+          <h1 style="margin-bottom: 1.5rem;">애니 / 영화 / 코믹스 평가표</h1>
+          <p class="lead" style="margin-bottom: 1rem;">
+            와타시(쑻) 사실은 애니메이션/영화/코믹스도 좋아한다능...<br>
+            아래 평점과 코멘트는 지극히 주관적인 취향에 따른 것입니다.
+          </p>
+          ${legendHtml}
+          ${sectionsHtml}
+
+          <hr style="margin: 3rem 0; border-top: 1px solid #ddd;" />
+
+          <div style="margin-top: 1rem; text-align:left;">
+             <p style="font-family : '고딕'; font-weight:bold;">평점 변경 로그</p>
+             <p><span style="font-size:2.4vh;color:red;font-family:sans-serif">프리즈마 이리야 : 90% > 85%</span></p>
              <p><span style="font-size:2.4vh;color:green;font-family:sans-serif">소녀종말여행 : 77% > 83%</span></p>
              <p><span style="font-size:2.4vh;color:green;font-family:sans-serif">러키스타 : 71% > 81%</span></p>
              <p><span style="font-size:2.4vh;color:red;font-family:sans-serif">바케모노가타리 : 94% > 90%</span></p>
@@ -2026,7 +1211,7 @@
              <p><span style="font-size:2.4vh;color:green;font-family:sans-serif">5등분의 신부 : 73% > 79%</span></p>
              <p><span style="font-size:2.4vh;color:green;font-family:sans-serif">날씨의 아이 : 78% > 81%</span></p>
 
-<br><br>
+             <br><br>
              
              <p style="font-family : '고딕';">작품 Top 10</p>
 
@@ -2057,7 +1242,7 @@
              <p style="font-family : '고딕';">1위 <span style="text-decoration: none; font-size: 2rem; color:#E0144C; font-weight:bold;font-style: italic;">마법소녀 마도카☆마기카(tva/극장판)</span></p>
              <p style="font-family : '고딕';">0위 <span style="text-decoration: none; font-size: 2rem; color:#9A1663; font-weight:bold;font-style: italic;">마법소녀를 동경해서(원작)</span></p>
 
-<p style="font-family : '고딕';">프리큐어 Top 10</p>
+             <p style="font-family : '고딕';">프리큐어 Top 10</p>
 
              <p style="font-family : '고딕';">10위 <span style="text-decoration: none; font-size: 2rem; color:#85CDFD; font-weight:bold;font-style: italic;">Go! 프린세스 프리큐어</span></p>
              <p style="font-family : '고딕';">9위 <span style="text-decoration: none; font-size: 2rem; color:#85CDFD; font-weight:bold;font-style: italic;">프리큐어 splash star</span></p>
@@ -2084,53 +1269,7 @@
              <p style="font-family : '고딕';">1위 <span style="text-decoration: none; font-size: 2rem; color:#E0144C; font-weight:bold;font-style: italic;">아케미 호무라(마법소녀 마도카☆마기카)</span></p>
              <p style="font-family : '고딕';">0위 <span style="text-decoration: none; font-size: 2rem; color:#9A1663; font-weight:bold;font-style: italic;">카나메 마도카(마법소녀 마도카☆마기카)</span></p>
 
-
-
-<!--
-<p style="font-family : '고딕';">순수백합(장르백합) Top 10</p>
-
-             <p style="font-family : '고딕';">10위 <span style="text-decoration: none; font-size: 2rem; color:#FFB9B9; font-weight:bold;font-style: italic;">나 이외 인류 전원 백합&만약 사랑이 보인다면</span></p>
-             <p style="font-family : '고딕';">9위 <span style="text-decoration: none; font-size: 2rem; color:#FFB9B9; font-weight:bold;font-style: italic;">날조트랩 -ntr-</span></p>
-             <p style="font-family : '고딕';">8위 <span style="text-decoration: none; font-size: 2rem; color:#FFB9B9; font-weight:bold;font-style: italic;">스왑⇔스왑</span></p>
-             <p style="font-family : '고딕';">7위 <span style="text-decoration: none; font-size: 2rem; color:#FFB9B9; font-weight:bold;font-style: italic;">CITRUS</span></p>
-             <p style="font-family : '고딕';">6위 <span style="text-decoration: none; font-size: 2rem; color:#FF5858; font-weight:bold;font-style: italic;">전생왕녀와 천재영애의 마법혁명</span></p>
-             <p style="font-family : '고딕';">5위 <span style="text-decoration: none; font-size: 2rem; color:#FF5858; font-weight:bold;font-style: italic;">보빔무리</span></p>
-             <p style="font-family : '고딕';">4위 <span style="text-decoration: none; font-size: 2rem; color:#FF5858; font-weight:bold;font-style: italic;">저 아이에게 키스와 흰 백합꽃을</span></p>
-             <p style="font-family : '고딕';">3위 <span style="text-decoration: none; font-size: 2rem; color:#FF5858; font-weight:bold;font-style: italic;">더러운 네가 가장 귀여워</span></p>
-             <p style="font-family : '고딕';">2위 <span style="text-decoration: none; font-size: 2rem; color:#E0144C; font-weight:bold;font-style: italic;">해피 슈가 라이프</span></p>
-             <p style="font-family : '고딕';">1위 <span style="text-decoration: none; font-size: 2rem; color:#E0144C; font-weight:bold;font-style: italic;">이윽고 네가 된다</span></p>
-             <p style="font-family : '고딕';">0위 <span style="text-decoration: none; font-size: 2rem; color:#9A1663; font-weight:bold;font-style: italic;">마법소녀를 동경해서(원작)</span></p>
-             
-
-             
-             <p style="font-family : '고딕';">작품성(주제/철학/연출) Top 10</p>
-
-             <p style="font-family : '고딕';">10위 <span style="text-decoration: none; font-size: 2rem; color:#85CDFD; font-weight:bold;font-style: italic;">쓰르라미 울적에 례 사이코로시</span></p>
-             <p style="font-family : '고딕';">9위 <span style="text-decoration: none; font-size: 2rem; color:#85CDFD; font-weight:bold;font-style: italic;">니세코이 227화&이윽고 네가 된다 34화</span></p>
-             <p style="font-family : '고딕';">8위 <span style="text-decoration: none; font-size: 2rem; color:#85CDFD; font-weight:bold;">보석의 나라 95화</span></p>
-             <p style="font-family : '고딕';">7위 <span style="text-decoration: none; font-size: 2rem; color:#85CDFD; font-weight:bold;">허긋토! 프리큐어 48화</span></p>
-             <p style="font-family : '고딕';">6위 <span style="text-decoration: none; font-size: 2rem; color:#3C84AB; font-weight:bold;font-style: italic;">마기아 레코드 3기 2, 3화</span></p>
-             <p style="font-family : '고딕';">5위 <span style="text-decoration: none; font-size: 2rem; color:#3C84AB; font-weight:bold;">소녀 종말 여행 47화</span></p>
-             <p style="font-family : '고딕';">4위 <span style="text-decoration: none; font-size: 2rem; color:#3C84AB; font-weight:bold;">오와리모노가타리 오우기 다크</span></p>
-             <p style="font-family : '고딕';">3위 <span style="text-decoration: none; font-size: 2rem; color:#3C84AB; font-weight:bold;font-style: italic;">엔드 오브 에반게리온</span></p>
-             <p style="font-family : '고딕';">2위 <span style="text-decoration: none; font-size: 2rem; color:#362FD9; font-weight:bold;">해피 슈가 라이프 애니 최종화</span></p>
-             <p style="font-family : '고딕';">1위 <span style="text-decoration: none; font-size: 2rem; color:#362FD9; font-weight:bold;font-style: italic;">마법소녀 마도카☆마기카(반역의 이야기)</span></p>
-             
-            
-             <p style="font-family : '고딕';">인생을 바꾼 작품 Top 10</p>
-
-             <p style="font-family : '고딕';">10위 <span style="text-decoration: none; font-size: 2rem; color:#FFB9B9; font-weight:bold;">나와 호랑이님</span></p>
-             <p style="font-family : '고딕';">9위 <span style="text-decoration: none; font-size: 2rem; color:#FFB9B9; font-weight:bold;">시간가게&시간을 파는 상점</span></p>
-             <p style="font-family : '고딕';">8위 <span style="text-decoration: none; font-size: 2rem; color:#FFB9B9; font-weight:bold;">너의 췌장을 먹고싶어(원작/실사)</span></p>
-             <p style="font-family : '고딕';">7위 <span style="text-decoration: none; font-size: 2rem; color:#FF5858; font-weight:bold;">1Q84(무라카미 하루키)</span></p>
-             <p style="font-family : '고딕';">6위 <span style="text-decoration: none; font-size: 2rem; color:#FF5858; font-weight:bold;">매트릭스</span></p>
-             <p style="font-family : '고딕';">5위 <span style="text-decoration: none; font-size: 2rem; color:#FF5858; font-weight:bold;font-style: italic;">프리큐어 시리즈</span></p>
-             <p style="font-family : '고딕';">4위 <span style="text-decoration: none; font-size: 2rem; color:#FF5858; font-weight:bold;">개미(베르나르 베르베르)</span></p>
-             <p style="font-family : '고딕';">3위 <span style="text-decoration: none; font-size: 2rem; color:#E0144C; font-weight:bold;font-style: italic;">마법소녀 마도카 마기카</span></p>
-             <p style="font-family : '고딕';">2위 <span style="text-decoration: none; font-size: 2rem; color:#E0144C; font-weight:bold;">사람의 아들(이문열)</span></p>
-             <p style="font-family : '고딕';">1위 <span style="text-decoration: none; font-size: 2rem; color:#9A1663; font-weight:bold;">죄와 벌(도스토예프스키)</span></p>
-             </div>-->
-<p style="font-family : '고딕';">비공개 프로젝트</p>
+             <p style="font-family : '고딕'; margin-top:2rem;">비공개 프로젝트</p>
 
              <a style="font-family : '고딕';" href="https://coshaman.github.io/qlc/" target="_blank"><span style="text-decoration: none; font-size: 2rem; color:#FFB9B9; font-weight:bold;">quick link changer</span></a><br>
              <a style="font-family : '고딕';" href="https://coshaman.github.io/pron/" target="_blank"><span style="text-decoration: none; font-size: 2rem; color:#FFB9B9; font-weight:bold;">pron</span></a><br>
@@ -2138,17 +1277,16 @@
              <a style="font-family : '고딕';" href="https://coshaman.github.io/password/" target="_blank"><span style="text-decoration: none; font-size: 2rem; color:#FFB9B9; font-weight:bold;">password maker</span></a><br>
              <a style="font-family : '고딕';" href="https://coshaman.github.io/memo/" target="_blank"><span style="text-decoration: none; font-size: 2rem; color:#FFB9B9; font-weight:bold;">memo</span></a><br>
              <a style="font-family : '고딕';" href="https://coshaman.github.io/card/" target="_blank"><span style="text-decoration: none; font-size: 2rem; color:#FFB9B9; font-weight:bold;">card maker</span></a>
+          </div>
+        </div>
+      </center>
+    `;
 
+    var offset = $("#blog").offset();
+    $("html, body").animate({ scrollTop: offset.top }, 400);
+  }
+</script>
 
-             
-             </div>
-            </center>
-            `;
-            var offset = $("#blog").offset();
-         $('html, body').animate({scrollTop : offset.top}, 400);
-        }
-     
-     </script>
 
 </body>
 </html>
