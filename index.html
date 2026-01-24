@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박성현 포트폴리오 | Be Unpredictable</title>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Cinzel:wght@700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html { width: 100%; height: 100%; overflow: hidden; font-family: 'Noto Sans KR', sans-serif; background: #000; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        .legacy-link {
+            position: fixed; top: 20px; right: 20px; z-index: 9999;
+            color: white; border: 1px solid rgba(255,255,255,0.5);
+            padding: 10px 20px; border-radius: 30px; font-size: 0.9rem;
+            background: rgba(0,0,0,0.3); backdrop-filter: blur(5px);
+        }
+        .legacy-link:hover { background: white; color: black; }
+
+        .scroll-zone-hint {
+            position: fixed; right: 20px; top: 50%; transform: translateY(-50%);
+            height: 40vh; width: 4px; border-radius: 2px;
+            background: rgba(255,255,255,0.1);
+            z-index: 9990; pointer-events: none;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+        }
+        .scroll-zone-hint::before {
+            content: 'SCROLL HERE'; 
+            writing-mode: vertical-rl; text-orientation: mixed;
+            color: rgba(255,255,255,0.3); font-size: 0.7rem; letter-spacing: 3px;
+            margin-right: 15px; white-space: nowrap;
+        }
+        .scroll-indicator {
+            width: 100%; height: 20%; background: #00ff88;
+            border-radius: 2px; box-shadow: 0 0 10px #00ff88;
+            animation: scrollHintMove 2s infinite ease-in-out;
+        }
+        @keyframes scrollHintMove { 0%, 100% { transform: translateY(-100%); opacity: 0; } 50% { opacity: 1; } 100% { transform: translateY(100%); opacity: 0; } }
+
+        section {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            transition: opacity 1s ease, transform 1s ease; 
+            will-change: transform, opacity;
+            overflow: hidden;
+        }
+        
+        .section-hidden { transform: translateY(100%); opacity: 0; z-index: 10; pointer-events: none; }
+        .section-active { transform: translateY(0%); opacity: 1; z-index: 20; pointer-events: auto; }
+        .section-prev { transform: translateY(-30%); opacity: 0; z-index: 10; pointer-events: none; }
+
+        .content-wrap {
+            position: relative; z-index: 50; width: 85%; max-width: 1200px; max-height: 80vh;
+            overflow-y: auto; padding: 20px; color: white;
+            scrollbar-width: none; -ms-overflow-style: none;
+        }
+        .content-wrap::-webkit-scrollbar { display: none; }
+
+        .night-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+            z-index: 1;
+        }
+        #canvas-stars { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; }
+
+        #section-home { z-index: 30; background: transparent; }
+        .home-content { 
+            text-align: center; z-index: 50; pointer-events: none; 
+            transition: transform 1s ease, opacity 1s ease;
+        }
+        .home-title { font-family: 'Black Han Sans', sans-serif; font-size: 5rem; color: #fff; text-shadow: 0 0 20px rgba(255,255,255,0.5); margin-bottom: 20px; }
+        .home-subtitle { font-size: 1.5rem; color: #aaa; letter-spacing: 5px; }
+        .scroll-hint { margin-top: 50px; opacity: 0.7; animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-10px);} 60% {transform: translateY(-5px);} }
+
+        #section-info { background: transparent; z-index: 30; }
+        .ocean-container {
+            position: absolute; bottom: 0; left: 0; width: 100%; height: 35vh; 
+            z-index: 10; pointer-events: none;
+        }
+        .wave {
+            position: absolute; bottom: 0; left: 0; width: 200%; height: 100%;
+            background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg') repeat-x bottom left;
+            background-size: 50% auto;
+            filter: sepia(100%) hue-rotate(170deg) saturate(300%) brightness(0.4) contrast(1.2);
+            animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+            transform: translate3d(0, 0, 0); opacity: 0.9;
+        }
+        .wave:nth-of-type(2) { 
+            animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite; 
+            opacity: 1; 
+        }
+        @keyframes wave { 0% { margin-left: 0; } 100% { margin-left: -1600px; } }
+        @keyframes swell { 0%, 100% { transform: translate3d(0,-25px,0); } 50% { transform: translate3d(0,5px,0); } }
+
+        .info-card {
+            background: rgba(4, 14, 24, 0.6); border: 1px solid rgba(100, 200, 255, 0.1);
+            border-radius: 15px; padding: 40px;
+            color: #eee; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            position: relative; z-index: 20; backdrop-filter: blur(8px);
+            text-align: left; max-width: 800px; margin: 0 auto;
+        }
+        .info-card h3 { color: #76E4F7; margin-bottom: 20px; }
+        .info-list li { margin-bottom: 10px; font-size: 1.1rem; }
+
+        #water-fill-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 110%;
+            background: linear-gradient(to bottom, rgba(0, 31, 63, 0.95) 0%, #001f3f 30%, #000000 90%);
+            transform: translateY(110%); 
+            transition: transform 3.5s cubic-bezier(0.2, 0, 0.2, 1);
+            z-index: 100; pointer-events: none;
+        }
+        .no-transition { transition: none !important; }
+        #water-fill-overlay::before {
+            content: ''; position: absolute; top: -45px; left: 0; width: 200%; height: 50px;
+            background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg') repeat-x bottom left;
+            background-size: 50% 50px;
+            filter: sepia(100%) hue-rotate(170deg) saturate(300%) brightness(0.4) contrast(1.2);
+            animation: wave 4s linear infinite;
+        }
+        body.filling-water #water-fill-overlay { transform: translateY(0%); }
+
+        .bubble {
+            position: absolute;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.6), rgba(255,255,255,0.1));
+            border-radius: 50%; pointer-events: none; z-index: 101;
+            filter: blur(1px);
+            animation: rise 4s ease-in forwards;
+        }
+        @keyframes rise {
+            0% { transform: translateY(0) scale(1); opacity: 0; }
+            20% { opacity: 0.8; }
+            100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+        }
+
+        #section-exp { 
+            background: linear-gradient(180deg, #001f3f 0%, #001220 50%, #000000 100%);
+            z-index: 40;
+        }
+        
+        .exp-title {
+            text-align: center; text-shadow: 0 0 10px rgba(118, 228, 247, 0.5);
+            opacity: 0; transform: translateY(30px);
+        }
+        .section-active .exp-title {
+            animation: floatUpReveal 1.2s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        .exp-timeline { 
+            border-left: 2px solid rgba(118, 228, 247, 0.2); 
+            padding-left: 20px; margin-left: 10px; position: relative; z-index: 10; 
+            margin-bottom: 100px;
+        }
+        .exp-item { margin-bottom: 40px; opacity: 0; transform: translateY(50px); }
+        
+        .section-active .exp-item { 
+            animation: floatUpReveal 1s ease-out forwards; 
+        }
+        
+        @keyframes floatUpReveal { 0% { opacity: 0; transform: translateY(50px); } 100% { opacity: 1; transform: translateY(0); } }
+
+        .exp-year { font-weight: bold; color: #5D9CEC; font-size: 1.3rem; margin-bottom: 5px; }
+        .exp-desc { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 5px; line-height: 1.6; }
+        .exp-desc a { color: #AEEA00; font-weight: bold; text-decoration: none; border-bottom: 1px dashed #AEEA00; transition: 0.2s; }
+        .exp-desc a:hover { color: #fff; border-bottom-style: solid; }
+
+        #stack-area {
+            position: relative; width: 100%; 
+            min-height: 80vh; 
+            margin-top: 50px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .tech-item {
+            position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center;
+            animation: floatIcon 6s ease-in-out infinite; cursor: pointer;
+            transition: 0.3s;
+            padding: 15px; 
+        }
+        .tech-icon {
+            width: 60px; height: 60px; filter: grayscale(100%) brightness(3); opacity: 0.4; transition: 0.3s;
+        }
+        .tech-name {
+            margin-top: 10px; color: #fff; font-size: 0.9rem; opacity: 0; transition: 0.3s; 
+            text-shadow: 0 0 5px rgba(255,255,255,0.5); font-weight: bold;
+        }
+        .tech-item:hover .tech-icon { filter: grayscale(0) brightness(1.2); opacity: 1; transform: scale(1.2); }
+        .tech-item:hover .tech-name { opacity: 1; transform: translateY(5px); }
+
+        @keyframes floatIcon {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        #section-project { 
+            background-color: #050505; 
+            background-image: linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 40;
+        }
+        .project-tabs { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; }
+        .filter-btn {
+            background: rgba(0,0,0,0.5); border: 1px solid #00ff88; color: #00ff88;
+            padding: 8px 20px; border-radius: 20px; cursor: pointer; font-family: 'Courier New', monospace;
+            font-weight: bold; transition: 0.3s;
+        }
+        .filter-btn.active, .filter-btn:hover { background: #00ff88; color: black; box-shadow: 0 0 10px #00ff88; }
+
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; padding-bottom: 50px; }
+        .project-card {
+            border: 1px solid #00ff88; background: rgba(0,15,10,0.9); padding: 0;
+            box-shadow: 0 0 5px #00ff88; transition: 0.3s; position: relative; overflow: hidden;
+            display: flex; flex-direction: column;
+        }
+        .project-card.hidden { display: none; } 
+
+        .project-card:hover { transform: translateY(-5px); box-shadow: 0 0 20px #00ff88; }
+        .project-img { width: 100%; height: 160px; object-fit: cover; border-bottom: 1px solid #00ff88; opacity: 0.8; transition: 0.3s; }
+        .project-card:hover .project-img { opacity: 1; }
+        .project-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .neon-text { color: #00ff88; text-shadow: 0 0 5px #00ff88; font-family: 'Courier New', monospace; font-weight: bold; margin-bottom: 10px; }
+        .project-desc { color: #ccc; font-size: 0.85rem; line-height: 1.5; margin-bottom: 15px; }
+        .project-link { display: inline-block; align-self: flex-start; color: #fff; text-decoration: none; border: 1px solid #fff; padding: 5px 15px; font-size: 0.8rem; transition: 0.3s; }
+        .project-link:hover { background: #00ff88; color: #000; border-color: #00ff88; }
+
+        #section-contact { background: #1a1a1a; color: #fff; z-index: 40; }
+        #canvas-snow { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: auto; }
+        .contact-box {
+            background: rgba(255,255,255,0.1); padding: 50px; border-radius: 20px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.2);
+            text-align: center; z-index: 10; backdrop-filter: blur(10px); max-width: 600px; width: 90%;
+        }
+        .contact-box h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .social-links { margin-top: 20px; display: flex; justify-content: center; gap: 20px; font-size: 1.5rem; }
+        .social-links a { color: white; transition: 0.3s; }
+        .social-links a:hover { color: #76E4F7; transform: scale(1.1); }
+        .footer { position: absolute; bottom: 10px; width: 100%; text-align: center; z-index: 100; font-size: 0.8rem; color: rgba(255,255,255,0.5); pointer-events: none; }
+        .footer a { pointer-events: auto; cursor: pointer; text-decoration: none; color: inherit; }
+
+    </style>
+</head>
+<body>
+
+    <div class="night-bg"></div>
+    <canvas id="canvas-stars"></canvas>
+    <a href="legacy.html" class="legacy-link">간단히 보기</a>
+    <div id="water-fill-overlay"></div>
+
+    <div class="scroll-zone-hint">
+        <div class="scroll-indicator"></div>
+    </div>
+
+    <section id="section-home" class="section-active">
+        <div class="home-content">
+            <h4 style="color:#ddd; margin-bottom:10px;">Welcome,</h4>
+            <h1 class="home-title">Be Unpredictable</h1>
+            <h6 class="home-subtitle">Frontend Developer | R&D Planning Manager</h6>
+            <div class="scroll-hint"><i class="ti-angle-down" style="font-size: 2rem;"></i></div>
+        </div>
+    </section>
+
+    <section id="section-info" class="section-hidden">
+        <div class="ocean-container">
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+        <div class="content-wrap">
+            <div class="info-card">
+                <h3>Who am I?</h3>
+                <hr style="border-top: 1px solid rgba(255,255,255,0.2);">
+                <p>2018년에 프로그래밍을 시작해 '집돌이 페렐만'이라는 이름으로 웹개발을 주로 하고 있는 서울대 대학생 개발자입니다. 알고리즘부터 AI까지 다양한 분야에서 탐구하며, 세상을 바꿀 기술을 꿈꾸고 있습니다.<br><br>
+개인 프로젝트를 주로 진행하며 팀 프로젝트, 기획, 프레젠테이션에도 익숙합니다. 기획, 개발, 마케팅에 주로 참여하고 있습니다. 또한 영상 편집, 디자인, 번역 작업의 외주를 받고 있습니다.</p>
+                <br>
+                <ul class="info-list" style="list-style: none;">
+                    <li><strong>Birthdate:</strong> 2006/01/22</li>
+                    <li><strong>Email:</strong> kmcha72@gmail.com</li>
+                    <li><strong>School:</strong> 서울대학교 컴퓨터공학부 25학번</li>
+                    <li><strong>Contact:</strong> Discord (coshaman)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-exp" class="section-hidden">
+        <div class="content-wrap">
+            <h2 class="mb-5 exp-title">My History</h2>
+            <div class="exp-timeline" id="history-container">
+            </div>
+
+            <div id="stack-area">
+                <h2 style="text-align:center; color:white; text-shadow:0 0 10px rgba(255,255,255,0.3); margin-top:50px; margin-bottom: 30px;">My Tech Stack</h2>
+                <div style="text-align:center; font-size:0.8rem; color:#aaa; margin-bottom:20px;">터치하거나 마우스를 올려보세요!</div>
+                </div>
+        </div>
+    </section>
+
+    <section id="section-project" class="section-hidden">
+        <div class="content-wrap">
+            <h2 class="neon-text" style="text-align:center; margin-bottom:30px; font-size:3rem;">PROJECT_ARCHIVE</h2>
+            
+            <div class="project-tabs">
+                <button class="filter-btn active" onclick="filterProjects('new')">BEST</button>
+                <button class="filter-btn" onclick="filterProjects('web')">WEB</button>
+                <button class="filter-btn" onclick="filterProjects('video')">VIDEO</button>
+                <button class="filter-btn" onclick="filterProjects('team')">TEAM</button>
+            </div>
+
+            <div class="project-grid" id="project-grid">
+                <div class="project-card" data-category="web new">
+                    <img src="assets/imgs/web-11.png" class="project-img" alt="TTUNS">
+                    <div class="project-content">
+                        <h4 class="neon-text">TTUNS</h4>
+                        <p class="project-desc">서울대학교 시간표 앱 (교수님/강의실 시간표, 빈 강의실 찾기)</p>
+                        <a href="https://ttuns-web.vercel.app/" target="_blank" class="project-link">ACCESS</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web new">
+                    <img src="assets/imgs/web-10.png" class="project-img" alt="SCSC">
+                    <div class="project-content">
+                        <h4 class="neon-text">SCSC</h4>
+                        <p class="project-desc">서울대학교 중앙컴퓨터연구회 공식 홈페이지</p>
+                        <a href="https://scsc.dev" target="_blank" class="project-link">ACCESS</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web new">
+                    <img src="assets/imgs/web-9.png" class="project-img" alt="Market3D">
+                    <div class="project-content">
+                        <h4 class="neon-text">Market3D</h4>
+                        <p class="project-desc">K-HTML 해커톤 대상작. 동대문시장 마케팅 대행 서비스</p>
+                        <a href="https://www.canva.com/design/DAGxf_hIq0E/lu4QXw0TLe5M85-HdqQD8g/view" target="_blank" class="project-link">VIEW</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web new">
+                    <img src="assets/imgs/web-5.png" class="project-img" alt="HackerTyper">
+                    <div class="project-content">
+                        <h4 class="neon-text">HackerTyper</h4>
+                        <p class="project-desc">해커 타이핑 시뮬레이터. 유튜브 촬영용 소스</p>
+                        <a href="https://coshaman.github.io/hackertyper/" target="_blank" class="project-link">ACCESS</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="new">
+                    <img src="assets/imgs/blog1.jpg" class="project-img" alt="Column">
+                    <div class="project-content">
+                        <h4 class="neon-text" style="color:#ffcc00;">매일경제 칼럼</h4>
+                        <p class="project-desc">'세 줄 요약'을 경계하라</p>
+                        <a href="https://www.mk.co.kr/news/contributors/10599598" target="_blank" class="project-link">READ</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <img src="assets/imgs/web-1.png" class="project-img" alt="Coogle">
+                    <div class="project-content">
+                        <h4 class="neon-text">Coogle</h4>
+                        <p class="project-desc">다양한 검색엔진(구글, 네이버 등) 모음 사이트</p>
+                        <a href="https://coshaman.github.io/Coogle/index.html" target="_blank" class="project-link">ACCESS</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <img src="assets/imgs/web-2.png" class="project-img" alt="DoryChat">
+                    <div class="project-content">
+                        <h4 class="neon-text">Dory Chat</h4>
+                        <p class="project-desc">심심해서 만든 채팅 프로그램. 로또, 포인트 기능 포함</p>
+                        <a href="https://coshaman.github.io/dorichat/index.html" target="_blank" class="project-link">ACCESS</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <img src="assets/imgs/web-3.png" class="project-img" alt="AjaeC">
+                    <div class="project-content">
+                        <h4 class="neon-text">AjaeC</h4>
+                        <p class="project-desc">아재 양성 사이트</p>
+                        <a href="https://coshaman.github.io/ajaeC/index.html" target="_blank" class="project-link">ACCESS</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <img src="assets/imgs/web-4.png" class="project-img" alt="TestLove">
+                    <div class="project-content">
+                        <h4 class="neon-text">짝사랑 테스트</h4>
+                        <p class="project-desc">재미로 보는 짝사랑 확률</p>
+                        <a href="https://coshaman.github.io/testLove/" target="_blank" class="project-link">ACCESS</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <img src="assets/imgs/web-6.png" class="project-img" alt="Book">
+                    <div class="project-content">
+                        <h4 class="neon-text">독서기록장</h4>
+                        <p class="project-desc">100권 이상의 도서 기록 및 평점</p>
+                        <a href="https://coshaman.github.io/book/" target="_blank" class="project-link">ACCESS</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <img src="assets/imgs/web-7.png" class="project-img" alt="Generator">
+                    <div class="project-content">
+                        <h4 class="neon-text">문구 제조기</h4>
+                        <p class="project-desc">단어 조합 및 문장 구성 프로그램</p>
+                        <a href="https://coshaman.github.io/crazygenerator/test.html" target="_blank" class="project-link">ACCESS</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <img src="assets/imgs/web-8.png" class="project-img" alt="Library">
+                    <div class="project-content">
+                        <h4 class="neon-text">도서관 관리</h4>
+                        <p class="project-desc">원천 도서관 출입자 관리 현황 시스템</p>
+                        <a href="https://coshaman.github.io/shinsunglibrary/" target="_blank" class="project-link">ACCESS</a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="video new">
+                    <img src="assets/imgs/video-1.png" class="project-img" alt="Movie">
+                    <div class="project-content">
+                        <h4 class="neon-text">간첩 대 산타</h4>
+                        <p class="project-desc">직접 각본/편집/주연을 맡은 단편 영화</p>
+                        <a href="https://www.youtube.com/watch?v=bEsaKshHjjs" target="_blank" class="project-link">WATCH</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="video">
+                    <img src="assets/imgs/video-2.png" class="project-img" alt="FutureFood">
+                    <div class="project-content">
+                        <h4 class="neon-text">미래의 식량</h4>
+                        <p class="project-desc">수직농장 관련 영상 (교내대회 금상)</p>
+                        <a href="https://youtu.be/U5eM_HkRJcg?t=142" target="_blank" class="project-link">WATCH</a>
+                    </div>
+                </div>
+                 <div class="project-card" data-category="video new">
+                    <img src="assets/imgs/video-3.png" class="project-img" alt="Opening">
+                    <div class="project-content">
+                        <h4 class="neon-text">신성제 오프닝</h4>
+                        <p class="project-desc">제41회 신성제 오프닝 영상 편집</p>
+                        <a href="https://youtu.be/GJj6FLqW4mU" target="_blank" class="project-link">WATCH</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="team">
+                    <img src="assets/imgs/semibt.png" class="project-img" alt="Semicolon">
+                    <div class="project-content">
+                        <h4 class="neon-text">세미콜론</h4>
+                        <p class="project-desc">청소년 개발자 커뮤니티 어드민</p>
+                        <a href="https://discord.com/invite/mBk3BX8" target="_blank" class="project-link">INFO</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="team">
+                    <img src="assets/imgs/delta.png" class="project-img" alt="Delta">
+                    <div class="project-content">
+                        <h4 class="neon-text">Team Delta</h4>
+                        <p class="project-desc">팀 델타 리더</p>
+                        <a href="#" class="project-link">INFO</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="team">
+                    <img src="assets/imgs/array.png" class="project-img" alt="Array">
+                    <div class="project-content">
+                        <h4 class="neon-text">Team Array</h4>
+                        <p class="project-desc">팀 어레이 마케팅팀 어드민</p>
+                        <a href="#" class="project-link">INFO</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="team new">
+                    <img src="assets/imgs/scsc.jpg" class="project-img" alt="SCSC init">
+                    <div class="project-content">
+                        <h4 class="neon-text">SCSC init</h4>
+                        <p class="project-desc">SCSC init 프론트엔드 개발자/부회장</p>
+                        <a href="https://scsc.dev" target="_blank" class="project-link">ACCESS</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="section-contact" class="section-hidden">
+        <canvas id="canvas-snow"></canvas>
+        <div class="contact-box">
+            <h2>Get In Touch</h2>
+            <p style="color:#ccc;">새로운 기적을 함께 만들어갈 준비가 되셨나요?</p>
+            <br>
+            <p><i class="ti-email"></i> kmcha72@gmail.com</p>
+            <p><i class="ti-mobile"></i> coshaman@snu.ac.kr</p>
+            
+            <div class="social-links">
+                <a href="https://github.com/coshaman" target="_blank"><i class="ti-github"></i></a>
+                <a href="https://www.instagram.com/coshaman22/" target="_blank"><i class="ti-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCQgR3dMSZyKR_8bdBrV6kVA" target="_blank"><i class="ti-youtube"></i></a>
+                <a href="https://m.facebook.com/" target="_blank"><i class="ti-facebook"></i></a>
+            </div>
+
+            <div style="margin-top:30px;">
+                <div id="fb-root"></div>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v9.0" nonce="fgA04vnQ"></script>
+                <div class="fb-comments" data-href="https://coshaman.github.io/portfolio/index.html" data-width="100%" data-numposts="3" data-colorscheme="dark"></div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>&copy; 박성현 2026</p>
+        </footer>
+    </section>
+
+    <script>
+        const historyData = [
+            {
+                year: "2025 - Present",
+                descs: [
+                    { text: "서울대학교 컴퓨터공학부 25학번 재학중", link: null },
+                    { text: "카이스트 / 전남대 의예 / 대가대 의예 / 서울대 공대(광역) 최초합격", link: null },
+                    { text: "K-HTML 해커톤 대상 수상 (상금 200만원)", link: null },
+                    { text: "서울대학교 중앙컴퓨터연구회 SCSC 부회장", link: null },
+                    { text: "제 1회 SCSC 온라인 해커톤 총괄", link: null },
+                    { text: "제7기 이감 성적우수 장학생", link: {text: "제7기 이감 성적우수 장학생", url: "https://yigam.co.kr/scholarship/2025.php"} },
+                    { text: "moji 뉴스레터 우수 아티클러", link: null },
+                    { text: "오디바이스 멘토", link: null },
+                    { text: "정보처리기능사 취득", link: null }
+                ]
+            },
+            {
+                year: "2023 - 2024",
+                descs: [
+                    { text: "매일경제 칼럼 기고", link: {text: "매일경제 칼럼 기고", url: "https://www.mk.co.kr/news/contributors/10599598"} },
+                    { text: "제 1회 ISEKICE 모의고사 총괄 / 제 3회 SYNTHESIS 출제", link: {text: "제 1회 ISEKICE 모의고사 총괄", url: "https://drive.google.com/drive/folders/1F5gbP3cPDx2piyaoi3xx-FwBhH9Wtx6C"} },
+                    { text: "포스텍 이공계 학과대탐험 / 서울대 이공계 프런티어 캠프(컴공) 수료", link: null },
+                    { text: "봉주장학재단 / 기업은행 장학금 수여", link: null },
+                    { text: "신성고등학교 SW동아리 프론 부기장", link: null },
+                    { text: "Moji 뉴스레터 아티클러", link: null },
+                    { text: "제10회 안양시 학생동아리 축제 부스 운영", link: null },
+                ]
+            },
+            {
+                year: "2022",
+                descs: [
+                    { text: "EBS 장학퀴즈 출연", link: {text: "EBS 장학퀴즈 출연", url: "https://www.ebs.co.kr/tv/show?prodId=623&lectId=60282803"} },
+                    { text: "안양시 독서마라톤 대회 우수 (안양 시장상)", link: null },
+                    { text: "제9회 안양시 학생동아리 축제 부스 운영", link: null },
+                    { text: "신성고등학교 입학", link: null }
+                ]
+            },
+            {
+                year: "2020 - 2021",
+                descs: [
+                    { text: "제 3회 한국 코드페어 해커톤 대상 (장관상)", link: null },
+                    { text: "제 2회 안양시 학생 창의과학 온라인 경진대회 금상", link: {text: "제 2회 안양시 학생 창의과학 온라인 경진대회 금상", url: "https://www.youtube.com/watch?v=JXincm8LVSU"} },
+                    { text: "안양시 독서마라톤 대회 최우수 (안양 시장상)", link: null },
+                    { text: "단편 영화 제작 (각본/감독/편집/주연)", link: {text: "단편 영화 제작", url: "https://www.youtube.com/watch?v=bEsaKshHjjs"} }
+                ]
+            },
+            {
+                year: "2019 - 2020",
+                descs: [
+                    { text: "전국청소년과학탐구대회 과학 컴퓨팅 부문 대상(과학창의재단이사장상)", link: null },
+                    { text: "제 1회 한국 코드페어 SW 빌더스 챌린지 은상(정보화진흥원 원장상)", link: null },
+                    { text: "제 1회 안양시 학생 창의과학 경진대회 로봇 디자인 부문 은상(시장상)", link: null },
+                    { text: "수학동아 폴리매스데이 행사 1, 2, 3회 운영", link: null }
+                ]
+            },
+            {
+                year: "2006 - 2018",
+                descs: [
+                    { text: "2006.01.22 서울 출생", link: null },
+                    { text: "DIAT / ITQ 자격증 취득", link: null },
+                    { text: "ASPNET 유네스코 UCC 공모전 우수", link: null }
+                ]
+            }
+        ];
+
+        function renderHistory() {
+            const container = document.getElementById('history-container');
+            let html = '';
+            historyData.forEach((item, index) => {
+                const delay = 0.8 + (index * 0.2); 
+                html += `<div class="exp-item" style="animation-delay: ${delay}s">
+                            <div class="exp-year">${item.year}</div>`;
+                item.descs.forEach(desc => {
+                    if (desc.link) {
+                        html += `<div class="exp-desc"><a href="${desc.link.url}" target="_blank">${desc.link.text}</a>${desc.text.replace(desc.link.text, '')}</div>`;
+                    } else {
+                        html += `<div class="exp-desc">${desc.text}</div>`;
+                    }
+                });
+                html += `</div>`;
+            });
+            container.innerHTML = html;
+        }
+        renderHistory();
+
+        const stacks = [
+            { name: "HTML5", slug: "html5" },
+            { name: "CSS3", slug: "css" },
+            { name: "JavaScript", slug: "javascript" },
+            { name: "Next.js", slug: "nextdotjs" },
+            { name: "Kotlin", slug: "kotlin" },
+            { name: "SQLite", slug: "sqlite" },
+            { name: "FastAPI", slug: "fastapi" },
+            { name: "Python", slug: "python" },
+            { name: "C", slug: "c" },
+            { name: "Unity", slug: "unity" },
+            { name: "Git", slug: "git" },
+            { name: "Docker", slug: "docker" }
+        ];
+
+        function renderStack() {
+            const container = document.getElementById('stack-area');
+            const width = window.innerWidth;
+            
+            const existingItems = container.querySelectorAll('.tech-item');
+            existingItems.forEach(el => el.remove());
+
+            const cols = width < 768 ? 2 : 4; 
+            const rows = Math.ceil(stacks.length / cols);
+            
+            const slots = [];
+            for (let i = 0; i < cols * rows; i++) slots.push(i);
+            
+            slots.sort(() => Math.random() - 0.5);
+
+            stacks.forEach((stack, index) => {
+                if(index >= slots.length) return; 
+
+                const slot = slots[index];
+                const row = Math.floor(slot / cols);
+                const col = slot % cols;
+
+                const topBase = (row / rows) * 60 + 25; 
+                const leftBase = (col / cols) * 80 + 10;
+                
+                const randomTop = (Math.random() - 0.5) * 10; 
+                const randomLeft = (Math.random() - 0.5) * 10;
+
+                const top = Math.max(25, Math.min(95, topBase + randomTop)); 
+                const left = Math.max(5, Math.min(95, leftBase + randomLeft));
+                
+                const delay = Math.random() * 5;
+                const size = Math.random() * 20 + 40; 
+                
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'tech-item';
+                itemDiv.style.top = `${top}%`;
+                itemDiv.style.left = `${left}%`;
+                itemDiv.style.animationDelay = `${delay}s`;
+                itemDiv.innerHTML = `
+                    <img src="https://cdn.simpleicons.org/${stack.slug}/white" class="tech-icon" style="width:${size}px;">
+                    <span class="tech-name">${stack.name}</span>
+                `;
+
+                const icon = itemDiv.querySelector('.tech-icon');
+                const originalUrl = icon.src;
+                const coloredUrl = `https://cdn.simpleicons.org/${stack.slug}`;
+                
+                itemDiv.addEventListener('mouseenter', (e) => { 
+                    icon.src = coloredUrl; 
+                    icon.style.filter = 'none'; 
+                    createSingleBubble(e.clientX, e.clientY);
+                });
+                itemDiv.addEventListener('mouseleave', () => { icon.src = originalUrl; icon.style.filter = 'grayscale(100%) brightness(3)'; });
+
+                itemDiv.addEventListener('click', (e) => {
+                    createSingleBubble(e.clientX, e.clientY);
+                });
+
+                container.appendChild(itemDiv);
+            });
+        }
+
+        function createSingleBubble(x, y) {
+            const b = document.createElement('div');
+            b.classList.add('bubble');
+            const size = Math.random() * 20 + 10;
+            b.style.width = `${size}px`; b.style.height = `${size}px`;
+            b.style.left = `${x}px`;
+            b.style.top = `${y}px`; 
+            b.style.animationDuration = `2s`;
+            document.body.appendChild(b);
+            setTimeout(() => b.remove(), 2000);
+        }
+
+        renderStack();
+
+        const sections = Array.from(document.querySelectorAll('section'));
+        const waterOverlay = document.getElementById('water-fill-overlay');
+        let currentSectionIndex = 0;
+        let isAnimating = false;
+        let lastScrollTime = 0;
+        const SCROLL_COOLDOWN = 1200; 
+        const SCROLL_THRESHOLD = 50; 
+
+        window.addEventListener('wheel', (e) => {
+            if (e.target.closest('.content-wrap')) return;
+
+            const now = Date.now();
+            if (isAnimating || (now - lastScrollTime < SCROLL_COOLDOWN)) return;
+            if (Math.abs(e.deltaY) < SCROLL_THRESHOLD) return;
+
+            if (e.deltaY > 0) { 
+                if (currentSectionIndex < sections.length - 1) {
+                    changeSection(currentSectionIndex + 1);
+                    lastScrollTime = now;
+                }
+            } else { 
+                if (currentSectionIndex > 0) {
+                    changeSection(currentSectionIndex - 1);
+                    lastScrollTime = now;
+                }
+            }
+        }, { passive: false });
+
+        function changeSection(newIndex) {
+            const prevIndex = currentSectionIndex;
+            currentSectionIndex = newIndex;
+
+            if (prevIndex === 0 && newIndex === 1) {
+                isAnimating = true;
+                speedUpStars();
+                const homeContent = sections[0].querySelector('.home-content');
+                homeContent.style.transform = 'translateY(-100vh)';
+                homeContent.style.opacity = '0';
+                sections[1].classList.remove('section-hidden');
+                sections[1].classList.add('section-active');
+                setTimeout(() => {
+                    sections[0].classList.remove('section-active');
+                    sections[0].classList.add('section-prev');
+                    isAnimating = false;
+                }, 1000);
+            }
+            else if (prevIndex === 1 && newIndex === 2) {
+                isAnimating = true; 
+                createRandomBubbles();
+                document.body.classList.add('filling-water');
+                setTimeout(() => {
+                    sections[1].classList.remove('section-active');
+                    sections[1].classList.add('section-prev');
+                    sections[2].classList.remove('section-hidden');
+                    sections[2].classList.add('section-active'); 
+                    setTimeout(() => {
+                        document.body.classList.remove('filling-water');
+                        waterOverlay.classList.add('no-transition');
+                        waterOverlay.style.transform = 'translateY(110%)'; 
+                        void waterOverlay.offsetWidth; 
+                        waterOverlay.classList.remove('no-transition');
+                        waterOverlay.style.transform = ''; 
+                        isAnimating = false; 
+                    }, 1000);
+                }, 3000);
+            }
+            else {
+                isAnimating = true;
+                sections[prevIndex].classList.remove('section-active');
+                if (newIndex > prevIndex) sections[prevIndex].classList.add('section-prev');
+                else {
+                    sections[prevIndex].classList.add('section-hidden');
+                    if(newIndex === 0) {
+                        const homeContent = sections[0].querySelector('.home-content');
+                        homeContent.style.transform = 'translateY(0)';
+                        homeContent.style.opacity = '1';
+                    }
+                }
+                sections[newIndex].classList.remove('section-hidden');
+                sections[newIndex].classList.remove('section-prev');
+                sections[newIndex].classList.add('section-active');
+                setTimeout(() => { isAnimating = false; }, 1000);
+            }
+        }
+
+        window.addEventListener('load', () => {
+             filterProjects('new');
+        });
+
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const btns = document.querySelectorAll('.filter-btn');
+
+            btns.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            if(window.event && window.event.type === 'click') {
+                window.event.target.classList.add('active');
+            } else {
+                const bestBtn = document.querySelector('.filter-btn');
+                if(bestBtn) bestBtn.classList.add('active');
+            }
+
+            cards.forEach(card => {
+                if (card.dataset.category.includes(category)) {
+                    card.style.display = 'flex';
+                    setTimeout(() => { card.style.opacity = '1'; card.style.transform = 'scale(1)'; }, 10);
+                } else {
+                    card.style.opacity = '0'; card.style.transform = 'scale(0.8)';
+                    setTimeout(() => { card.style.display = 'none'; }, 300);
+                }
+            });
+        }
+
+        function createRandomBubbles() {
+            const container = document.body;
+            for(let i=0; i<40; i++) {
+                setTimeout(() => {
+                    const b = document.createElement('div');
+                    b.classList.add('bubble');
+                    const size = Math.random() * 40 + 10;
+                    b.style.width = `${size}px`; b.style.height = `${size}px`;
+                    b.style.left = `${Math.random() * 100}vw`;
+                    b.style.bottom = `-10vh`; 
+                    b.style.animationDuration = `${Math.random() * 2 + 3}s`; 
+                    container.appendChild(b);
+                    setTimeout(() => b.remove(), 5000);
+                }, i * 80);
+            }
+        }
+
+        const canvasStars = document.getElementById('canvas-stars');
+        const ctxStars = canvasStars.getContext('2d');
+        let width, height, stars = [], meteors = [], starSpeedMultiplier = 1; 
+        function initStars() {
+            width = window.innerWidth; height = window.innerHeight;
+            canvasStars.width = width; canvasStars.height = height;
+            stars = []; for(let i=0; i<300; i++) stars.push({x: Math.random()*width, y: Math.random()*height, r: Math.random()*1.5, a: Math.random()});
+        }
+        function speedUpStars() {
+            starSpeedMultiplier = 30; 
+            let decel = setInterval(() => { if(starSpeedMultiplier > 1) starSpeedMultiplier *= 0.9; else { starSpeedMultiplier = 1; clearInterval(decel); } }, 50);
+        }
+        function drawStars() {
+            ctxStars.clearRect(0, 0, width, height);
+            stars.forEach(s => {
+                ctxStars.fillStyle = `rgba(255, 255, 255, ${s.a})`;
+                ctxStars.beginPath(); ctxStars.arc(s.x, s.y, s.r, 0, Math.PI*2); ctxStars.fill();
+                s.y -= 0.5 * starSpeedMultiplier; if(s.y < 0) { s.y = height; s.x = Math.random() * width; }
+            });
+            if(Math.random() < 0.05) meteors.push({x: Math.random()*width, y: -50, l: Math.random()*80+20, s: Math.random()*15+10});
+            meteors.forEach((m, i) => {
+                ctxStars.strokeStyle = "rgba(255,255,255,0.8)"; ctxStars.lineWidth = 2;
+                ctxStars.beginPath(); ctxStars.moveTo(m.x, m.y); ctxStars.lineTo(m.x - m.l/2, m.y + m.l); ctxStars.stroke();
+                m.x -= m.s/2; m.y += m.s * (starSpeedMultiplier > 5 ? 2 : 1);
+                if(m.y > height) meteors.splice(i, 1);
+            });
+            requestAnimationFrame(drawStars);
+        }
+        initStars(); drawStars(); window.addEventListener('resize', initStars);
+
+        const canvasSnow = document.getElementById('canvas-snow');
+        const ctxSnow = canvasSnow.getContext('2d');
+        let snows = [], piledSnow = [], mouse = { x: -100, y: -100 };
+        function initSnow() {
+            canvasSnow.width = window.innerWidth; canvasSnow.height = window.innerHeight;
+            snows = []; piledSnow = new Array(Math.ceil(canvasSnow.width)).fill(canvasSnow.height);
+        }
+        canvasSnow.addEventListener('mousemove', (e) => {
+            mouse.x = e.clientX; mouse.y = e.clientY;
+            const range = 50; const start = Math.max(0, Math.floor(mouse.x - range)); const end = Math.min(canvasSnow.width, Math.ceil(mouse.x + range));
+            for(let i=start; i<end; i++) { if(piledSnow[i] < canvasSnow.height) piledSnow[i] += 5; }
+        });
+        function drawSnow() {
+            if(sections[currentSectionIndex].id !== 'section-contact') { requestAnimationFrame(drawSnow); return; }
+            ctxSnow.clearRect(0, 0, canvasSnow.width, canvasSnow.height);
+            ctxSnow.fillStyle = "white"; ctxSnow.beginPath();
+            ctxSnow.moveTo(0, canvasSnow.height);
+            for(let i=0; i<canvasSnow.width; i+=5) ctxSnow.lineTo(i, piledSnow[i]);
+            ctxSnow.lineTo(canvasSnow.width, canvasSnow.height); ctxSnow.fill();
+            if(snows.length < 250) snows.push({ x: Math.random() * canvasSnow.width, y: -10, r: Math.random() * 3 + 1, v: Math.random() * 2 + 1, swing: Math.random() * 0.02 });
+            ctxSnow.fillStyle = "rgba(255, 255, 255, 0.8)"; ctxSnow.beginPath();
+            for(let i = 0; i < snows.length; i++) {
+                let p = snows[i]; let dx = mouse.x - p.x; let dy = mouse.y - p.y;
+                if (Math.sqrt(dx*dx + dy*dy) < 80) p.x -= Math.cos(Math.atan2(dy, dx)) * 3;
+                ctxSnow.moveTo(p.x, p.y); ctxSnow.arc(p.x, p.y, p.r, 0, Math.PI*2);
+                p.y += p.v; p.x += Math.sin(p.y * p.swing);
+                const floorX = Math.floor(Math.max(0, Math.min(canvasSnow.width-1, p.x)));
+                if(p.y >= piledSnow[floorX] - 5) {
+                    const range = 10;
+                    for(let k = floorX - range; k < floorX + range; k++) { if(k >=0 && k < canvasSnow.width) piledSnow[k] -= 0.5; }
+                    snows.splice(i, 1); i--;
+                }
+            }
+            ctxSnow.fill(); requestAnimationFrame(drawSnow);
+        }
+        initSnow(); drawSnow(); window.addEventListener('resize', initSnow);
+    </script>
+</body>
+</html>
