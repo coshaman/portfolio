@@ -2,14 +2,32 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <meta name="description" content="서울대학교 컴퓨터공학부 박성현(집돌이 페렐만)의 포트폴리오입니다. 신성고등학교를 졸업하고 세상을 바꿀 기술을 꿈꾸는 개발자 박성현의 프로젝트와 기록을 확인하세요.">
+    <meta name="keywords" content="서울대 박성현, 신성고 박성현, 개발자 박성현, 집돌이 페렐만, 박성현 포트폴리오, Frontend Developer, Seoul National University">
+    <meta name="author" content="박성현">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="박성현 포트폴리오 | Be Unpredictable">
+    <meta property="og:description" content="서울대 컴퓨터공학부 개발자 박성현(집돌이 페렐만)의 포트폴리오. Unpredictable한 가능성을 확인해보세요.">
+    <meta property="og:image" content="assets/imgs/opengraph.jpg">
+    <meta property="og:url" content="https://coshaman.github.io/portfolio">
+
     <title>박성현 포트폴리오 | Be Unpredictable</title>
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Cinzel:wght@700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body, html { width: 100%; height: 100%; overflow: hidden; font-family: 'Noto Sans KR', sans-serif; background: #000; }
+        body, html { 
+            width: 100%; height: 100%; 
+            overflow: hidden; 
+            overflow-x: hidden !important; 
+            font-family: 'Noto Sans KR', sans-serif; 
+            background: #000; 
+            touch-action: none;
+        }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         
         .legacy-link {
@@ -39,6 +57,7 @@
             animation: scrollHintMove 2s infinite ease-in-out;
         }
         @keyframes scrollHintMove { 0%, 100% { transform: translateY(-100%); opacity: 0; } 50% { opacity: 1; } 100% { transform: translateY(100%); opacity: 0; } }
+        @keyframes scrollHintMoveX { 0%, 100% { transform: translateX(-100%); opacity: 0; } 50% { opacity: 1; } 100% { transform: translateX(100%); opacity: 0; } }
 
         section {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
@@ -54,7 +73,7 @@
 
         .content-wrap {
             position: relative; z-index: 50; width: 85%; max-width: 1200px; max-height: 80vh;
-            overflow-y: auto; padding: 20px; color: white;
+            overflow-y: auto; overflow-x: hidden; padding: 20px; color: white;
             scrollbar-width: none; -ms-overflow-style: none;
         }
         .content-wrap::-webkit-scrollbar { display: none; }
@@ -70,9 +89,15 @@
         .home-content { 
             text-align: center; z-index: 50; pointer-events: none; 
             transition: transform 1s ease, opacity 1s ease;
+            width: 100%; padding: 0 20px;
         }
-        .home-title { font-family: 'Black Han Sans', sans-serif; font-size: 5rem; color: #fff; text-shadow: 0 0 20px rgba(255,255,255,0.5); margin-bottom: 20px; }
-        .home-subtitle { font-size: 1.5rem; color: #aaa; letter-spacing: 5px; }
+        .home-title { 
+            font-family: 'Black Han Sans', sans-serif; font-size: 5rem; color: #fff; 
+            text-shadow: 0 0 20px rgba(255,255,255,0.5); margin-bottom: 20px; 
+            line-height: 1.1; word-break: keep-all;
+        }
+        .home-subtitle { font-size: 1.5rem; color: #aaa; letter-spacing: 5px; word-break: keep-all; }
+        
         .scroll-hint { margin-top: 50px; opacity: 0.7; animation: bounce 2s infinite; }
         @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-10px);} 60% {transform: translateY(-5px);} }
 
@@ -164,7 +189,7 @@
         @keyframes floatUpReveal { 0% { opacity: 0; transform: translateY(50px); } 100% { opacity: 1; transform: translateY(0); } }
 
         .exp-year { font-weight: bold; color: #5D9CEC; font-size: 1.3rem; margin-bottom: 5px; }
-        .exp-desc { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 5px; line-height: 1.6; }
+        .exp-desc { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 5px; line-height: 1.6; word-break: keep-all; }
         .exp-desc a { color: #AEEA00; font-weight: bold; text-decoration: none; border-bottom: 1px dashed #AEEA00; transition: 0.2s; }
         .exp-desc a:hover { color: #fff; border-bottom-style: solid; }
 
@@ -175,11 +200,32 @@
             border-top: 1px solid rgba(255,255,255,0.1);
         }
         
+
+        .github-stats-img {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            max-width: 90%; 
+            height: auto; 
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+            pointer-events: none; 
+        }
+
+        .project-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+            gap: 25px; 
+            padding-bottom: 50px; 
+        }
+
         .tech-item {
             position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center;
             animation: floatIcon 6s ease-in-out infinite; cursor: pointer;
             transition: 0.3s;
             padding: 15px; 
+            z-index: 10; 
         }
         .tech-icon {
             width: 60px; height: 60px; filter: grayscale(100%) brightness(3); opacity: 0.4; transition: 0.3s;
@@ -210,7 +256,6 @@
         }
         .filter-btn.active, .filter-btn:hover { background: #00ff88; color: black; box-shadow: 0 0 10px #00ff88; }
 
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; padding-bottom: 50px; }
         .project-card {
             border: 1px solid #00ff88; background: rgba(0,15,10,0.9); padding: 0;
             box-shadow: 0 0 5px #00ff88; transition: 0.3s; position: relative; overflow: hidden;
@@ -222,8 +267,12 @@
         .project-img { width: 100%; height: 160px; object-fit: cover; border-bottom: 1px solid #00ff88; opacity: 0.8; transition: 0.3s; }
         .project-card:hover .project-img { opacity: 1; }
         .project-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .neon-text { color: #00ff88; text-shadow: 0 0 5px #00ff88; font-family: 'Courier New', monospace; font-weight: bold; margin-bottom: 10px; }
-        .project-desc { color: #ccc; font-size: 0.85rem; line-height: 1.5; margin-bottom: 15px; }
+        .neon-text { 
+            color: #00ff88; text-shadow: 0 0 5px #00ff88; 
+            font-family: 'Courier New', monospace; font-weight: bold; margin-bottom: 10px; 
+            word-break: break-all;
+        }
+        .project-desc { color: #ccc; font-size: 0.85rem; line-height: 1.5; margin-bottom: 15px; word-break: keep-all; }
         .project-link { display: inline-block; align-self: flex-start; color: #fff; text-decoration: none; border: 1px solid #fff; padding: 5px 15px; font-size: 0.8rem; transition: 0.3s; }
         .project-link:hover { background: #00ff88; color: #000; border-color: #00ff88; }
 
@@ -241,6 +290,52 @@
         .footer { position: absolute; bottom: 10px; width: 100%; text-align: center; z-index: 100; font-size: 0.8rem; color: rgba(255,255,255,0.5); pointer-events: none; }
         .footer a { pointer-events: auto; cursor: pointer; text-decoration: none; color: inherit; }
 
+        @media (max-width: 768px) {
+            .home-title { font-size: 2.5rem; }
+            .home-subtitle { font-size: 1rem; letter-spacing: 2px; }
+            .neon-text { font-size: 2rem !important; }
+            h2 { font-size: 2rem !important; }
+            .content-wrap { width: 95%; padding: 10px; }
+            
+            .scroll-zone-hint {
+                top: auto; bottom: 30px; right: 50%; transform: translateX(50%);
+                width: 150px; height: 4px;
+                flex-direction: column-reverse;
+            }
+            .scroll-zone-hint::before {
+                writing-mode: horizontal-tb;
+                margin-right: 0; margin-bottom: 8px;
+            }
+            .scroll-indicator {
+                width: 20%; height: 100%;
+                animation: scrollHintMoveX 2s infinite ease-in-out;
+            }
+        }
+        @media (max-width: 768px) {
+        #stack-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            min-height: auto;
+            padding-bottom: 50px;
+        }
+        .github-stats-img {
+            position: static;
+            transform: none;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            width: 85%;
+            max-width: 400px;
+        }
+        .tech-item {
+            position: relative;
+            top: auto !important;
+            left: auto !important;
+            margin: 12px 0;
+            transform: none;
+        }
+    }
     </style>
 </head>
 <body>
@@ -278,9 +373,15 @@
                 <ul class="info-list" style="list-style: none;">
                     <li><strong>Birthdate:</strong> 2006/01/22</li>
                     <li><strong>Email:</strong> kmcha72@gmail.com</li>
-                    <li><strong>School:</strong> 서울대학교 컴퓨터공학부 25학번</li>
+                    <li><strong>School:</strong> 서울대학교 컴퓨터공학부</li>
                     <li><strong>Contact:</strong> Discord (coshaman)</li>
                 </ul>
+                <div class="social-links" style="margin-top: 20px; font-size: 1.5rem; display: flex; gap: 15px;">
+                    <a href="https://github.com/coshaman" target="_blank"><i class="ti-github"></i></a>
+                    <a href="https://www.instagram.com/coshaman22/" target="_blank"><i class="ti-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UCQgR3dMSZyKR_8bdBrV6kVA" target="_blank"><i class="ti-youtube"></i></a>
+                    <a href="https://m.facebook.com/" target="_blank"><i class="ti-facebook"></i></a>
+                </div>
             </div>
         </div>
     </section>
@@ -292,9 +393,12 @@
             </div>
 
             <div id="stack-area">
-                <h2 style="text-align:center; color:white; text-shadow:0 0 10px rgba(255,255,255,0.3); margin-top:50px; margin-bottom: 30px;">My Tech Stack</h2>
-                <div style="text-align:center; font-size:0.8rem; color:#aaa; margin-bottom:20px;">터치하거나 마우스를 올려보세요!</div>
-                </div>
+                <h2 style="text-align:center; color:white; text-shadow:0 0 10px rgba(255,255,255,0.3); margin-top:50px; margin-bottom: 30px; position:relative; z-index:20;">My Tech Stack</h2>
+                <div style="text-align:center; font-size:0.8rem; color:#aaa; margin-bottom:20px; position:relative; z-index:20;">터치하거나 마우스를 올려보세요!</div>
+                
+                <img src="https://github-readme-stats-fast.vercel.app/api?username=coshaman&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&theme=tokyonight" 
+                     alt="Github Stats" class="github-stats-img">
+            </div>
         </div>
     </section>
 
@@ -310,161 +414,7 @@
             </div>
 
             <div class="project-grid" id="project-grid">
-                <div class="project-card" data-category="web new">
-                    <img src="assets/imgs/web-11.png" class="project-img" alt="TTUNS">
-                    <div class="project-content">
-                        <h4 class="neon-text">TTUNS</h4>
-                        <p class="project-desc">서울대학교 시간표 앱 (교수님/강의실 시간표, 빈 강의실 찾기)</p>
-                        <a href="https://ttuns-web.vercel.app/" target="_blank" class="project-link">ACCESS</a>
-                    </div>
-                </div>
-                <div class="project-card" data-category="web new">
-                    <img src="assets/imgs/web-10.png" class="project-img" alt="SCSC">
-                    <div class="project-content">
-                        <h4 class="neon-text">SCSC</h4>
-                        <p class="project-desc">서울대학교 중앙컴퓨터연구회 공식 홈페이지</p>
-                        <a href="https://scsc.dev" target="_blank" class="project-link">ACCESS</a>
-                    </div>
-                </div>
-                <div class="project-card" data-category="web new">
-                    <img src="assets/imgs/web-9.png" class="project-img" alt="Market3D">
-                    <div class="project-content">
-                        <h4 class="neon-text">Market3D</h4>
-                        <p class="project-desc">K-HTML 해커톤 대상작. 동대문시장 마케팅 대행 서비스</p>
-                        <a href="https://www.canva.com/design/DAGxf_hIq0E/lu4QXw0TLe5M85-HdqQD8g/view" target="_blank" class="project-link">VIEW</a>
-                    </div>
-                </div>
-                <div class="project-card" data-category="web new">
-                    <img src="assets/imgs/web-5.png" class="project-img" alt="HackerTyper">
-                    <div class="project-content">
-                        <h4 class="neon-text">HackerTyper</h4>
-                        <p class="project-desc">해커 타이핑 시뮬레이터. 유튜브 촬영용 소스</p>
-                        <a href="https://coshaman.github.io/hackertyper/" target="_blank" class="project-link">ACCESS</a>
-                    </div>
-                </div>
-                <div class="project-card" data-category="new">
-                    <img src="assets/imgs/blog1.jpg" class="project-img" alt="Column">
-                    <div class="project-content">
-                        <h4 class="neon-text" style="color:#ffcc00;">매일경제 칼럼</h4>
-                        <p class="project-desc">'세 줄 요약'을 경계하라</p>
-                        <a href="https://www.mk.co.kr/news/contributors/10599598" target="_blank" class="project-link">READ</a>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="web">
-                    <img src="assets/imgs/web-1.png" class="project-img" alt="Coogle">
-                    <div class="project-content">
-                        <h4 class="neon-text">Coogle</h4>
-                        <p class="project-desc">다양한 검색엔진(구글, 네이버 등) 모음 사이트</p>
-                        <a href="https://coshaman.github.io/Coogle/index.html" target="_blank" class="project-link">ACCESS</a>
-                    </div>
-                </div>
-                <div class="project-card" data-category="web">
-                    <img src="assets/imgs/web-2.png" class="project-img" alt="DoryChat">
-                    <div class="project-content">
-                        <h4 class="neon-text">Dory Chat</h4>
-                        <p class="project-desc">심심해서 만든 채팅 프로그램. 로또, 포인트 기능 포함</p>
-                        <a href="https://coshaman.github.io/dorichat/index.html" target="_blank" class="project-link">ACCESS</a>
-                    </div>
-                </div>
-                <div class="project-card" data-category="web">
-                    <img src="assets/imgs/web-3.png" class="project-img" alt="AjaeC">
-                    <div class="project-content">
-                        <h4 class="neon-text">AjaeC</h4>
-                        <p class="project-desc">아재 양성 사이트</p>
-                        <a href="https://coshaman.github.io/ajaeC/index.html" target="_blank" class="project-link">ACCESS</a>
-                    </div>
-                </div>
-                <div class="project-card" data-category="web">
-                    <img src="assets/imgs/web-4.png" class="project-img" alt="TestLove">
-                    <div class="project-content">
-                        <h4 class="neon-text">짝사랑 테스트</h4>
-                        <p class="project-desc">재미로 보는 짝사랑 확률</p>
-                        <a href="https://coshaman.github.io/testLove/" target="_blank" class="project-link">ACCESS</a>
-                    </div>
-                </div>
-                <div class="project-card" data-category="web">
-                    <img src="assets/imgs/web-6.png" class="project-img" alt="Book">
-                    <div class="project-content">
-                        <h4 class="neon-text">독서기록장</h4>
-                        <p class="project-desc">100권 이상의 도서 기록 및 평점</p>
-                        <a href="https://coshaman.github.io/book/" target="_blank" class="project-link">ACCESS</a>
-                    </div>
-                </div>
-                <div class="project-card" data-category="web">
-                    <img src="assets/imgs/web-7.png" class="project-img" alt="Generator">
-                    <div class="project-content">
-                        <h4 class="neon-text">문구 제조기</h4>
-                        <p class="project-desc">단어 조합 및 문장 구성 프로그램</p>
-                        <a href="https://coshaman.github.io/crazygenerator/test.html" target="_blank" class="project-link">ACCESS</a>
-                    </div>
-                </div>
-                <div class="project-card" data-category="web">
-                    <img src="assets/imgs/web-8.png" class="project-img" alt="Library">
-                    <div class="project-content">
-                        <h4 class="neon-text">도서관 관리</h4>
-                        <p class="project-desc">원천 도서관 출입자 관리 현황 시스템</p>
-                        <a href="https://coshaman.github.io/shinsunglibrary/" target="_blank" class="project-link">ACCESS</a>
-                    </div>
-                </div>
                 
-                <div class="project-card" data-category="video new">
-                    <img src="assets/imgs/video-1.png" class="project-img" alt="Movie">
-                    <div class="project-content">
-                        <h4 class="neon-text">간첩 대 산타</h4>
-                        <p class="project-desc">직접 각본/편집/주연을 맡은 단편 영화</p>
-                        <a href="https://www.youtube.com/watch?v=bEsaKshHjjs" target="_blank" class="project-link">WATCH</a>
-                    </div>
-                </div>
-                <div class="project-card" data-category="video">
-                    <img src="assets/imgs/video-2.png" class="project-img" alt="FutureFood">
-                    <div class="project-content">
-                        <h4 class="neon-text">미래의 식량</h4>
-                        <p class="project-desc">수직농장 관련 영상 (교내대회 금상)</p>
-                        <a href="https://youtu.be/U5eM_HkRJcg?t=142" target="_blank" class="project-link">WATCH</a>
-                    </div>
-                </div>
-                 <div class="project-card" data-category="video new">
-                    <img src="assets/imgs/video-3.png" class="project-img" alt="Opening">
-                    <div class="project-content">
-                        <h4 class="neon-text">신성제 오프닝</h4>
-                        <p class="project-desc">제41회 신성제 오프닝 영상 편집</p>
-                        <a href="https://youtu.be/GJj6FLqW4mU" target="_blank" class="project-link">WATCH</a>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="team">
-                    <img src="assets/imgs/semibt.png" class="project-img" alt="Semicolon">
-                    <div class="project-content">
-                        <h4 class="neon-text">세미콜론</h4>
-                        <p class="project-desc">청소년 개발자 커뮤니티 어드민</p>
-                        <a href="https://discord.com/invite/mBk3BX8" target="_blank" class="project-link">INFO</a>
-                    </div>
-                </div>
-                <div class="project-card" data-category="team">
-                    <img src="assets/imgs/delta.png" class="project-img" alt="Delta">
-                    <div class="project-content">
-                        <h4 class="neon-text">Team Delta</h4>
-                        <p class="project-desc">팀 델타 리더</p>
-                        <a href="#" class="project-link">INFO</a>
-                    </div>
-                </div>
-                <div class="project-card" data-category="team">
-                    <img src="assets/imgs/array.png" class="project-img" alt="Array">
-                    <div class="project-content">
-                        <h4 class="neon-text">Team Array</h4>
-                        <p class="project-desc">팀 어레이 마케팅팀 어드민</p>
-                        <a href="#" class="project-link">INFO</a>
-                    </div>
-                </div>
-                <div class="project-card" data-category="team new">
-                    <img src="assets/imgs/scsc.jpg" class="project-img" alt="SCSC init">
-                    <div class="project-content">
-                        <h4 class="neon-text">SCSC init</h4>
-                        <p class="project-desc">SCSC init 프론트엔드 개발자/부회장</p>
-                        <a href="https://scsc.dev" target="_blank" class="project-link">ACCESS</a>
-                    </div>
-                </div>
 
             </div>
         </div>
@@ -474,7 +424,7 @@
         <canvas id="canvas-snow"></canvas>
         <div class="contact-box">
             <h2>Get In Touch</h2>
-            <p style="color:#ccc;">새로운 기적을 함께 만들어갈 준비가 되셨나요?</p>
+            <p style="color:#ccc;">그 누구도 예상하지 못하는 길을 함께 만들어갈 준비가 되셨나요?</p>
             <br>
             <p><i class="ti-email"></i> kmcha72@gmail.com</p>
             <p><i class="ti-mobile"></i> coshaman@snu.ac.kr</p>
@@ -493,7 +443,7 @@
             </div>
         </div>
         <footer class="footer">
-            <p>&copy; 박성현 2026</p>
+            <p>&copy; 박성현 <script>document.write(new Date().getFullYear())</script></p>
         </footer>
     </section>
 
@@ -596,69 +546,177 @@
             { name: "Git", slug: "git" },
             { name: "Docker", slug: "docker" }
         ];
+        const projectData = [
+        { title: "TTUNS", category: "web new", img: "assets/imgs/web-11.png", desc: "서울대학교 시간표 앱 (교수님/강의실 시간표, 빈 강의실 찾기)", link: "https://ttuns-web.vercel.app/" },
+        { title: "SCSC", category: "web new", img: "assets/imgs/web-10.png", desc: "서울대학교 중앙컴퓨터연구회 공식 홈페이지", link: "https://scsc.dev" },
+        { title: "Market3D", category: "web new", img: "assets/imgs/web-9.png", desc: "K-HTML 해커톤 대상작. 동대문시장 마케팅 대행 서비스", link: "https://www.canva.com/design/DAGxf_hIq0E/lu4QXw0TLe5M85-HdqQD8g/view" },
+        { title: "HackerTyper", category: "web new", img: "assets/imgs/web-5.png", desc: "해커 타이핑 시뮬레이터. 유튜브 촬영용 소스", link: "https://coshaman.github.io/hackertyper/" },
+        { title: "매일경제 칼럼", category: "new", img: "assets/imgs/blog1.jpg", desc: "'세 줄 요약'을 경계하라", link: "https://www.mk.co.kr/news/contributors/10599598", highlight: true },
+        { title: "Coogle", category: "web", img: "assets/imgs/web-1.png", desc: "다양한 검색엔진(구글, 네이버 등) 모음 사이트", link: "https://coshaman.github.io/Coogle/index.html" },
+        { title: "Dory Chat", category: "web", img: "assets/imgs/web-2.png", desc: "채팅 프로그램. 로또, 포인트 기능 포함", link: "https://coshaman.github.io/dorichat/index.html" },
+        { title: "AjaeC", category: "web", img: "assets/imgs/web-3.png", desc: "아재 양성 사이트", link: "https://coshaman.github.io/ajaeC/index.html" },
+        { title: "짝사랑 테스트", category: "web", img: "assets/imgs/web-4.png", desc: "재미로 보는 짝사랑 확률", link: "https://coshaman.github.io/testLove/" },
+        { title: "독서기록장", category: "web", img: "assets/imgs/web-6.png", desc: "100권 이상의 도서 기록 및 평점", link: "https://coshaman.github.io/book/" },
+        { title: "문구 제조기", category: "web", img: "assets/imgs/web-7.png", desc: "단어 조합 및 문장 구성 프로그램", link: "https://coshaman.github.io/crazygenerator/test.html" },
+        { title: "도서관 관리", category: "web", img: "assets/imgs/web-8.png", desc: "원천 도서관 출입자 관리 현황 시스템", link: "https://coshaman.github.io/shinsunglibrary/" },
+        { title: "간첩 대 산타", category: "video new", img: "assets/imgs/video-1.png", desc: "직접 각본/편집/주연을 맡은 단편 영화", link: "https://www.youtube.com/watch?v=bEsaKshHjjs" },
+        { title: "미래의 식량", category: "video", img: "assets/imgs/video-2.png", desc: "수직농장 관련 영상 (교내대회 금상)", link: "https://youtu.be/U5eM_HkRJcg?t=142" },
+        { title: "신성제 오프닝", category: "video new", img: "assets/imgs/video-3.png", desc: "제41회 신성제 오프닝 영상 편집", link: "https://youtu.be/GJj6FLqW4mU" },
+        { title: "세미콜론", category: "team", img: "assets/imgs/semibt.png", desc: "청소년 개발자 커뮤니티 세미콜론 Admin", link: "https://discord.com/invite/mBk3BX8" },
+        { title: "Team Delta", category: "team", img: "assets/imgs/delta.png", desc: "팀 델타 리더", link: "#" },
+        { title: "Team Array", category: "team", img: "assets/imgs/array.png", desc: "팀 어레이 Admin", link: "#" },
+        { title: "SCSC init", category: "team new", img: "assets/imgs/scsc.jpg", desc: "SCSC init 프론트엔드 개발자/부회장", link: "https://scsc.dev" }
+    ];
 
-        function renderStack() {
-            const container = document.getElementById('stack-area');
-            const width = window.innerWidth;
-            
-            const existingItems = container.querySelectorAll('.tech-item');
-            existingItems.forEach(el => el.remove());
+    function renderProjects() {
+        const container = document.getElementById('project-grid');
+        container.innerHTML = '';
 
-            const cols = width < 768 ? 2 : 4; 
-            const rows = Math.ceil(stacks.length / cols);
-            
-            const slots = [];
-            for (let i = 0; i < cols * rows; i++) slots.push(i);
-            
-            slots.sort(() => Math.random() - 0.5);
+        projectData.forEach(p => {
+            const card = document.createElement('div');
+            card.className = 'project-card';
+            card.dataset.category = p.category;
 
-            stacks.forEach((stack, index) => {
-                if(index >= slots.length) return; 
+            const titleStyle = p.highlight ? 'style="color:#ffcc00;"' : '';
+            const linkText = p.category.includes('video') ? 'WATCH' : (p.category.includes('team') ? 'INFO' : (p.link === '#' ? 'DETAILS' : 'ACCESS'));
 
-                const slot = slots[index];
-                const row = Math.floor(slot / cols);
-                const col = slot % cols;
-
-                const topBase = (row / rows) * 60 + 25; 
-                const leftBase = (col / cols) * 80 + 10;
-                
-                const randomTop = (Math.random() - 0.5) * 10; 
-                const randomLeft = (Math.random() - 0.5) * 10;
-
-                const top = Math.max(25, Math.min(95, topBase + randomTop)); 
-                const left = Math.max(5, Math.min(95, leftBase + randomLeft));
-                
-                const delay = Math.random() * 5;
-                const size = Math.random() * 20 + 40; 
-                
-                const itemDiv = document.createElement('div');
-                itemDiv.className = 'tech-item';
-                itemDiv.style.top = `${top}%`;
-                itemDiv.style.left = `${left}%`;
-                itemDiv.style.animationDelay = `${delay}s`;
-                itemDiv.innerHTML = `
-                    <img src="https://cdn.simpleicons.org/${stack.slug}/white" class="tech-icon" style="width:${size}px;">
-                    <span class="tech-name">${stack.name}</span>
-                `;
-
-                const icon = itemDiv.querySelector('.tech-icon');
-                const originalUrl = icon.src;
-                const coloredUrl = `https://cdn.simpleicons.org/${stack.slug}`;
-                
-                itemDiv.addEventListener('mouseenter', (e) => { 
-                    icon.src = coloredUrl; 
-                    icon.style.filter = 'none'; 
-                    createSingleBubble(e.clientX, e.clientY);
-                });
-                itemDiv.addEventListener('mouseleave', () => { icon.src = originalUrl; icon.style.filter = 'grayscale(100%) brightness(3)'; });
-
-                itemDiv.addEventListener('click', (e) => {
-                    createSingleBubble(e.clientX, e.clientY);
-                });
-
-                container.appendChild(itemDiv);
-            });
+            card.innerHTML = `
+                <img src="${p.img}" class="project-img" alt="${p.title}">
+                <div class="project-content">
+                    <h4 class="neon-text" ${titleStyle}>${p.title}</h4>
+                    <p class="project-desc">${p.desc}</p>
+                    <a href="${p.link}" target="_blank" class="project-link">${linkText}</a>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+        
+        const activeBtn = document.querySelector('.filter-btn.active');
+        if(activeBtn) {
+            const category = activeBtn.innerText === 'BEST' ? 'new' : activeBtn.innerText.toLowerCase();
+            filterProjects(category);
         }
+    }
+
+    renderProjects();
+
+
+    function renderStack() {
+    const container = document.getElementById('stack-area');
+    const existingItems = container.querySelectorAll('.tech-item');
+    existingItems.forEach(el => el.remove());
+
+    const isMobile = window.innerWidth < 768;
+
+    if (isMobile) {
+        stacks.forEach((stack) => {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'tech-item';
+            
+            const delay = Math.random() * 5;
+            itemDiv.style.animationDelay = `${delay}s`;
+            
+            itemDiv.innerHTML = `
+                <img src="https://cdn.simpleicons.org/${stack.slug}/white" class="tech-icon" style="width:50px;">
+                <span class="tech-name">${stack.name}</span>
+            `;
+
+            const icon = itemDiv.querySelector('.tech-icon');
+            const originalUrl = icon.src;
+            const coloredUrl = `https://cdn.simpleicons.org/${stack.slug}`;
+            
+            itemDiv.addEventListener('mouseenter', (e) => { 
+                icon.src = coloredUrl; 
+                icon.style.filter = 'none'; 
+                createSingleBubble(e.clientX, e.clientY);
+            });
+            itemDiv.addEventListener('mouseleave', () => { 
+                icon.src = originalUrl; 
+                icon.style.filter = 'grayscale(100%) brightness(3)'; 
+            });
+            itemDiv.addEventListener('click', (e) => {
+                createSingleBubble(e.clientX, e.clientY);
+            });
+
+            container.appendChild(itemDiv);
+        });
+    } else {
+        const cols = 6; 
+        const rows = 4; 
+        const validSlots = [];
+        
+        const safeZoneXMin = 0.15;
+        const safeZoneXMax = 0.85;
+        const safeZoneYMin = 0.35;
+        const safeZoneYMax = 0.65; 
+
+        for(let r=0; r<rows; r++) {
+            for(let c=0; c<cols; c++) {
+                const cx = (c + 0.5) / cols;
+                const cy = (r + 0.5) / rows;
+                
+                let isBlocked = false;
+                
+                if (cy < 0.2) isBlocked = true; 
+                if (cx > safeZoneXMin && cx < safeZoneXMax && cy > safeZoneYMin && cy < safeZoneYMax) {
+                    isBlocked = true;
+                }
+
+                if(!isBlocked) validSlots.push({r, c});
+            }
+        }
+        
+        validSlots.sort(() => Math.random() - 0.5);
+
+        stacks.forEach((stack, index) => {
+            if(index >= validSlots.length) return; 
+
+            const slot = validSlots[index];
+            
+            const topBase = (slot.r / rows) * 100; 
+            const leftBase = (slot.c / cols) * 100;
+            
+            const jitter = 8;
+            const randomTop = (Math.random() - 0.5) * jitter; 
+            const randomLeft = (Math.random() - 0.5) * jitter;
+
+            const top = Math.max(5, Math.min(95, topBase + 5 + randomTop)); 
+            const left = Math.max(5, Math.min(95, leftBase + 5 + randomLeft));
+            
+            const delay = Math.random() * 5;
+            const size = Math.random() * 20 + 40; 
+            
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'tech-item';
+            itemDiv.style.top = `${top}%`;
+            itemDiv.style.left = `${left}%`;
+            itemDiv.style.animationDelay = `${delay}s`;
+            itemDiv.innerHTML = `
+                <img src="https://cdn.simpleicons.org/${stack.slug}/white" class="tech-icon" style="width:${size}px;">
+                <span class="tech-name">${stack.name}</span>
+            `;
+            
+            const icon = itemDiv.querySelector('.tech-icon');
+            const originalUrl = icon.src;
+            const coloredUrl = `https://cdn.simpleicons.org/${stack.slug}`;
+            
+            itemDiv.addEventListener('mouseenter', (e) => { 
+                icon.src = coloredUrl; 
+                icon.style.filter = 'none'; 
+                createSingleBubble(e.clientX, e.clientY);
+            });
+            itemDiv.addEventListener('mouseleave', () => { 
+                icon.src = originalUrl; 
+                icon.style.filter = 'grayscale(100%) brightness(3)'; 
+            });
+            itemDiv.addEventListener('click', (e) => {
+                createSingleBubble(e.clientX, e.clientY);
+            });
+
+            container.appendChild(itemDiv);
+        });
+    }
+}
 
         function createSingleBubble(x, y) {
             const b = document.createElement('div');
@@ -701,6 +759,35 @@
                 }
             }
         }, { passive: false });
+
+        let touchStartY = 0;
+        window.addEventListener('touchstart', (e) => {
+            touchStartY = e.touches[0].clientY;
+        }, { passive: true });
+
+        window.addEventListener('touchend', (e) => {
+            if (e.target.closest('.content-wrap')) return; 
+
+            const touchEndY = e.changedTouches[0].clientY;
+            const diff = touchStartY - touchEndY;
+            const now = Date.now();
+
+            if (isAnimating || (now - lastScrollTime < SCROLL_COOLDOWN)) return;
+
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) { 
+                    if (currentSectionIndex < sections.length - 1) {
+                        changeSection(currentSectionIndex + 1);
+                        lastScrollTime = now;
+                    }
+                } else { 
+                    if (currentSectionIndex > 0) {
+                        changeSection(currentSectionIndex - 1);
+                        lastScrollTime = now;
+                    }
+                }
+            }
+        }, { passive: true });
 
         function changeSection(newIndex) {
             const prevIndex = currentSectionIndex;
@@ -797,7 +884,7 @@
                     b.classList.add('bubble');
                     const size = Math.random() * 40 + 10;
                     b.style.width = `${size}px`; b.style.height = `${size}px`;
-                    b.style.left = `${Math.random() * 100}vw`;
+                    b.style.left = `${Math.random() * 90}vw`;
                     b.style.bottom = `-10vh`; 
                     b.style.animationDuration = `${Math.random() * 2 + 3}s`; 
                     container.appendChild(b);
