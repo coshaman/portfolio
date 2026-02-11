@@ -763,14 +763,29 @@
             touchStartY = e.touches[0].clientY;
         }, { passive: true });
 
+        
         window.addEventListener('touchend', (e) => {
-            if (e.target.closest('.content-wrap')) return; 
+            const contentWrap = e.target.closest('.content-wrap');
+            const isMobile = window.innerWidth < 768;
 
             const touchEndY = e.changedTouches[0].clientY;
             const diff = touchStartY - touchEndY;
             const now = Date.now();
 
             if (isAnimating || (now - lastScrollTime < SCROLL_COOLDOWN)) return;
+
+            if (contentWrap) {
+                if (!isMobile) return;
+
+                const { scrollTop, scrollHeight, clientHeight } = contentWrap;
+                
+                if (diff > 0) {
+                    if (scrollTop + clientHeight < scrollHeight - 1) return;
+                }
+                else if (diff < 0) {
+                    if (scrollTop > 0) return;
+                }
+            }
 
             if (Math.abs(diff) > 50) {
                 if (diff > 0) { 
